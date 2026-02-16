@@ -8,47 +8,56 @@
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="site-title">Global eInvoicing</div>
-    <div class="site-subtitle">Program Status Reports</div>
-    <div class="site-meta">ClearTax Engineering</div>
-  </header>
+  <nav class="top-bar">
+    <div class="top-bar-left">
+      <span class="top-bar-title">Global eInvoicing</span>
+      <span class="top-bar-subtitle">Program Status</span>
+    </div>
+    <div class="top-bar-right">
+      <select id="report-picker" class="report-picker">
+        <option value="">Loading...</option>
+      </select>
+    </div>
+  </nav>
 
-  <ul class="report-list" id="report-list">
-    <li class="loading">Loading reports...</li>
-  </ul>
-
-  <footer class="site-footer">
-    eInvoice Bot &middot; Auto-generated from Slack + Email
-  </footer>
+  <iframe id="report-frame" class="report-frame"></iframe>
 
   <script>
     (async function () {
-      const list = document.getElementById('report-list');
+      const picker = document.getElementById('report-picker');
+      const frame = document.getElementById('report-frame');
+      const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
       try {
         const res = await fetch('manifest.json');
         if (!res.ok) throw new Error('Failed to load manifest');
         const data = await res.json();
 
         if (!data.reports || data.reports.length === 0) {
-          list.innerHTML = '<li class="loading">No reports yet.</li>';
+          picker.innerHTML = '<option value="">No reports</option>';
           return;
         }
 
-        const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-
-        list.innerHTML = data.reports.map(function (r) {
-          const parts = r.date.split('-');
-          const d = new Date(+parts[0], +parts[1] - 1, +parts[2]);
-          const weekday = weekdays[d.getDay()];
-          return '<li><a href="reports/' + r.date + '.html">' +
-            '<span><span class="report-date">' + r.title + '</span>' +
-            '<span class="report-weekday">' + weekday + '</span></span>' +
-            '<span class="report-arrow">&rarr;</span>' +
-            '</a></li>';
+        picker.innerHTML = data.reports.map(function (r, i) {
+          var parts = r.date.split('-');
+          var d = new Date(+parts[0], +parts[1] - 1, +parts[2]);
+          var day = weekdays[d.getDay()];
+          var label = r.title + ' (' + day + ')';
+          if (i === 0) label = label + ' — Latest';
+          return '<option value="reports/' + r.date + '.html">' + label + '</option>';
         }).join('');
+
+        // Load latest report
+        frame.src = picker.value;
+        document.title = 'Program Status — ' + data.reports[0].title;
+
+        picker.addEventListener('change', function () {
+          frame.src = picker.value;
+          var idx = picker.selectedIndex;
+          document.title = 'Program Status — ' + data.reports[idx].title;
+        });
       } catch (e) {
-        list.innerHTML = '<li class="error">Could not load reports. ' + e.message + '</li>';
+        picker.innerHTML = '<option value="">Error loading reports</option>';
       }
     })();
   </script>

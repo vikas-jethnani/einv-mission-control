@@ -1,6 +1,6 @@
 /* ============================================================
    eInvoicing Program Status — Index Page Styles
-   Matches report palette: Nunito/Inter, #2D3748/#3182CE/#718096
+   Nav bar + full-height iframe layout
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
@@ -13,153 +13,121 @@
 
 :root {
   --ink: #2D3748;
-  --ink-light: #4A5568;
   --blue: #3182CE;
-  --blue-light: #EBF4FF;
   --gray: #718096;
   --gray-light: #A0AEC0;
   --gray-bg: #F7FAFC;
   --border: #E2E8F0;
   --white: #FFFFFF;
+  --nav-height: 52px;
   --font-display: 'Nunito', system-ui, -apple-system, sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
 }
 
-html {
-  font-size: 15px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
+html, body {
+  height: 100%;
+  overflow: hidden;
   font-family: var(--font-body);
   color: var(--ink);
   background: var(--white);
-  line-height: 1.6;
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 48px 24px;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* ---------- Header ---------- */
+/* ---------- Top Bar ---------- */
 
-.site-header {
-  margin-bottom: 48px;
-  padding-bottom: 24px;
-  border-bottom: 3px solid var(--ink);
-}
-
-.site-title {
-  font-family: var(--font-display);
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--ink);
-  letter-spacing: -0.5px;
-  margin-bottom: 4px;
-}
-
-.site-subtitle {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--blue);
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-
-.site-meta {
-  margin-top: 12px;
-  font-size: 0.8rem;
-  color: var(--gray);
-  font-family: var(--font-mono);
-}
-
-/* ---------- Report List ---------- */
-
-.report-list {
-  list-style: none;
-  padding: 0;
-}
-
-.report-list li {
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  margin-bottom: 12px;
-  transition: border-color 0.15s, box-shadow 0.15s;
-}
-
-.report-list li:hover {
-  border-color: var(--blue);
-  box-shadow: 0 2px 8px rgba(49, 130, 206, 0.1);
-}
-
-.report-list a {
+.top-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 24px;
-  text-decoration: none;
-  color: var(--ink);
+  height: var(--nav-height);
+  padding: 0 24px;
+  background: var(--ink);
+  color: var(--white);
 }
 
-.report-date {
+.top-bar-left {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.top-bar-title {
   font-family: var(--font-display);
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -0.3px;
 }
 
-.report-weekday {
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  color: var(--gray);
-  margin-left: 12px;
-  font-weight: 400;
-}
-
-.report-arrow {
-  font-family: var(--font-mono);
-  color: var(--blue);
-  font-size: 1rem;
-}
-
-/* ---------- Loading / Error ---------- */
-
-.loading, .error {
-  text-align: center;
-  padding: 48px 0;
-  color: var(--gray);
-  font-size: 0.9rem;
-}
-
-.error {
-  color: #E53E3E;
-}
-
-/* ---------- Footer ---------- */
-
-.site-footer {
-  margin-top: 48px;
-  padding-top: 24px;
-  border-top: 1px solid var(--border);
-  font-size: 0.75rem;
+.top-bar-subtitle {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
   color: var(--gray-light);
-  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ---------- Report Picker ---------- */
+
+.report-picker {
   font-family: var(--font-mono);
+  font-size: 0.8rem;
+  padding: 6px 32px 6px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23A0AEC0' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.report-picker:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.report-picker:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+
+.report-picker option {
+  background: var(--ink);
+  color: var(--white);
+}
+
+/* ---------- Report Frame ---------- */
+
+.report-frame {
+  width: 100%;
+  height: calc(100vh - var(--nav-height));
+  border: none;
+  display: block;
 }
 
 /* ---------- Responsive ---------- */
 
 @media (max-width: 600px) {
-  body {
-    padding: 24px 16px;
+  .top-bar {
+    padding: 0 12px;
   }
 
-  .site-title {
-    font-size: 1.5rem;
+  .top-bar-subtitle {
+    display: none;
   }
 
-  .report-list a {
-    padding: 12px 16px;
+  .report-picker {
+    font-size: 0.75rem;
+    padding: 4px 28px 4px 8px;
   }
 }
