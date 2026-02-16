@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global eInvoicing Program Status</title>
+  <link rel="stylesheet" href="index-styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-title">Global eInvoicing</div>
+    <div class="site-subtitle">Program Status Reports</div>
+    <div class="site-meta">ClearTax Engineering</div>
+  </header>
+
+  <ul class="report-list" id="report-list">
+    <li class="loading">Loading reports...</li>
+  </ul>
+
+  <footer class="site-footer">
+    eInvoice Bot &middot; Auto-generated from Slack + Email
+  </footer>
+
+  <script>
+    (async function () {
+      const list = document.getElementById('report-list');
+      try {
+        const res = await fetch('manifest.json');
+        if (!res.ok) throw new Error('Failed to load manifest');
+        const data = await res.json();
+
+        if (!data.reports || data.reports.length === 0) {
+          list.innerHTML = '<li class="loading">No reports yet.</li>';
+          return;
+        }
+
+        const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+        list.innerHTML = data.reports.map(function (r) {
+          const parts = r.date.split('-');
+          const d = new Date(+parts[0], +parts[1] - 1, +parts[2]);
+          const weekday = weekdays[d.getDay()];
+          return '<li><a href="reports/' + r.date + '.html">' +
+            '<span><span class="report-date">' + r.title + '</span>' +
+            '<span class="report-weekday">' + weekday + '</span></span>' +
+            '<span class="report-arrow">&rarr;</span>' +
+            '</a></li>';
+        }).join('');
+      } catch (e) {
+        list.innerHTML = '<li class="error">Could not load reports. ' + e.message + '</li>';
+      }
+    })();
+  </script>
+
+</body>
+</html>

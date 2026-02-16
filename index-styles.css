@@ -1,0 +1,165 @@
+/* ============================================================
+   eInvoicing Program Status — Index Page Styles
+   Matches report palette: Nunito/Inter, #2D3748/#3182CE/#718096
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ink: #2D3748;
+  --ink-light: #4A5568;
+  --blue: #3182CE;
+  --blue-light: #EBF4FF;
+  --gray: #718096;
+  --gray-light: #A0AEC0;
+  --gray-bg: #F7FAFC;
+  --border: #E2E8F0;
+  --white: #FFFFFF;
+  --font-display: 'Nunito', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
+}
+
+html {
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.6;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 3px solid var(--ink);
+}
+
+.site-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+
+.site-subtitle {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.site-meta {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: var(--gray);
+  font-family: var(--font-mono);
+}
+
+/* ---------- Report List ---------- */
+
+.report-list {
+  list-style: none;
+  padding: 0;
+}
+
+.report-list li {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.report-list li:hover {
+  border-color: var(--blue);
+  box-shadow: 0 2px 8px rgba(49, 130, 206, 0.1);
+}
+
+.report-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.report-date {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.report-weekday {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-left: 12px;
+  font-weight: 400;
+}
+
+.report-arrow {
+  font-family: var(--font-mono);
+  color: var(--blue);
+  font-size: 1rem;
+}
+
+/* ---------- Loading / Error ---------- */
+
+.loading, .error {
+  text-align: center;
+  padding: 48px 0;
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.error {
+  color: #E53E3E;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  font-size: 0.75rem;
+  color: var(--gray-light);
+  text-align: center;
+  font-family: var(--font-mono);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 600px) {
+  body {
+    padding: 24px 16px;
+  }
+
+  .site-title {
+    font-size: 1.5rem;
+  }
+
+  .report-list a {
+    padding: 12px 16px;
+  }
+}
