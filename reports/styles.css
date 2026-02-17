@@ -260,7 +260,6 @@ body {
   margin-bottom: var(--space-xl);
   border: 1px solid var(--border);
   border-radius: 8px;
-  overflow: hidden;
 }
 
 .country-card-header {
@@ -317,7 +316,7 @@ body {
 .rag-badge:hover::after {
   content: attr(data-tip);
   position: absolute;
-  top: calc(100% + 6px);
+  bottom: calc(100% + 6px);
   left: 50%;
   transform: translateX(-50%);
   background: var(--ink);
