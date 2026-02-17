@@ -101,14 +101,10 @@ body {
 }
 
 .report-disclaimer {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-style: italic;
-  color: var(--gray);
-  background: var(--gray-bg);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: var(--space-sm) var(--space-md);
-  margin-bottom: var(--space-lg);
+  color: var(--gray-light);
+  margin-top: var(--space-sm);
 }
 
 /* ---------- RAG Summary Bar ---------- */
