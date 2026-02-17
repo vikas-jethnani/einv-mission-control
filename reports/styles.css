@@ -305,6 +305,7 @@ body {
   gap: 4px;
   padding: 2px 10px;
   border-radius: 100px;
+  cursor: help;
   font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
