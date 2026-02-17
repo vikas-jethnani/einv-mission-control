@@ -524,8 +524,32 @@ body {
 
 /* ---------- Metrics Tables ---------- */
 
-.metrics-table {
+details.metrics-toggle {
   margin-top: var(--space-md);
+}
+
+details.metrics-toggle summary {
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gray);
+  list-style: none;
+  user-select: none;
+}
+
+details.metrics-toggle summary::-webkit-details-marker { display: none; }
+
+details.metrics-toggle summary::before {
+  content: "▸ ";
+  color: var(--gray-light);
+}
+
+details.metrics-toggle[open] summary::before {
+  content: "▾ ";
+}
+
+.metrics-table {
+  margin-top: var(--space-xs);
   width: 100%;
   border-collapse: collapse;
   font-size: 0.8rem;
