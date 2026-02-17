@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global eInvoicing Program Status &mdash; 17 Feb 2026</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="report-header">
+    <div class="report-title">Global eInvoicing Mission Control</div>
+    <div class="report-date">17 Feb 2026 &middot; Generated at 23:45 IST</div>
+    <div class="report-disclaimer">&#x26A0;&#xFE0E; Auto-generated from Slack, email, shared documents &amp; meeting notes activity spanning over last 5&ndash;7 days. May not be exhaustive.</div>
+  </header>
+
+  <!-- ==================== RAG SUMMARY BAR ==================== -->
+  <h2 class="rag-summary-heading">Country Health &mdash; 10 Countries Tracked</h2>
+  <div class="rag-summary">
+    <div class="rag-summary-item red">
+      <div class="rag-summary-count">4</div>
+      <div class="rag-summary-label">Red</div>
+      <div class="rag-summary-countries">India, KSA, Croatia, Germany</div>
+    </div>
+    <div class="rag-summary-item amber">
+      <div class="rag-summary-count">5</div>
+      <div class="rag-summary-label">Amber</div>
+      <div class="rag-summary-countries">Belgium, Poland, UAE, France, Malaysia</div>
+    </div>
+    <div class="rag-summary-item green">
+      <div class="rag-summary-count">0</div>
+      <div class="rag-summary-label">Green</div>
+      <div class="rag-summary-countries">&mdash;</div>
+    </div>
+    <div class="rag-summary-item no-data">
+      <div class="rag-summary-count">1</div>
+      <div class="rag-summary-label">No Data</div>
+      <div class="rag-summary-countries">Singapore</div>
+    </div>
+  </div>
+
+  <!-- ==================== CRITICAL BLOCKERS ==================== -->
+  <div class="callout-section blockers">
+    <h2>Critical Blockers</h2>
+    <ul>
+      <li><span class="country-tag">KSA:</span> Aramco PDF rejection &mdash; P0 escalation. IKK Group CIO threatening vendor switch over 108M SAR blocked invoice.
+        <ul>
+          <li>Aramco introduced new validation (Jan 1) requiring /EmbeddedFiles metadata key in uploaded PDFs. Impacts all KSA clients uploading to Aramco portal (~10+ customers confirmed).</li>
+          <li>Manual workaround exists (Adobe Pro XML fix) but not scalable. Engineering fix targeting next deployment.</li>
+        </ul>
+      </li>
+      <li><span class="country-tag">India:</span> Redis SEV-1 still triggering &mdash; root cause is missing rate limiting on IRP.
+        <ul>
+          <li>No permanent fix timeline communicated. PagerDuty alert remains active. Repeated incidents degrading platform reliability.</li>
+          <li>Incident response capacity reduced due to team availability constraints.</li>
+        </ul>
+      </li>
+      <li><span class="country-tag">Croatia:</span> E-reporting blocked 7+ days &mdash; awaiting engineering response despite daily follow-ups.
+        <ul>
+          <li>March 20 regulatory deadline at risk &mdash; compliance gap if e-reporting is not delivered on time.</li>
+          <li>Primary owner hospitalized. Reassignment under consideration but not confirmed.</li>
+        </ul>
+      </li>
+      <li><span class="country-tag">Germany:</span> G2V refusing to onboard until AP tracking feature is built &mdash; hard customer block.
+        <ul>
+          <li>Onboarding pushed by 2 weeks. Tied to 12Cr ARR EU portal enhancement opportunity. Churn risk if unresolved.</li>
+          <li>9+ open issues across HID Global, SGK, K&amp;S. Engineering capacity being allocated (ETA Feb 25).</li>
+        </ul>
+      </li>
+      <li><span class="country-tag">France:</span> AIFE says they haven&rsquo;t received ClearTax connection sheets (fiches raccordement) for PROD EDI and Qualification channels.
+        <ul>
+          <li>Blocks France testing pipeline entirely. Connection sheets need immediate submission.</li>
+          <li>7 product items still pending &mdash; blocking e-reporting and B2B flows. EDI certification (RGS/eIDAS) now also identified as a prerequisite.</li>
+        </ul>
+      </li>
+      <li><span class="country-tag">France:</span> Aurify cannot provide PDP interoperability testing &mdash; conflict of interest as accreditation body.
+        <ul>
+          <li>ClearTax must find an independent partner PDP for interop testing. Without this, PA certification cannot proceed.</li>
+          <li>Search for partner PDP underway through existing contacts. Jean-Pierre may facilitate introductions.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ==================== HIGHLIGHTS ==================== -->
+  <div class="callout-section highlights">
+    <h2>Highlights</h2>
+    <ul>
+      <li><span class="country-tag">UAE:</span> Corner 5 (C5) development completed &mdash; final integration layer required by FTA for full e-invoicing compliance.
+        <ul>
+          <li>Demo PRs ready. QA handover call being scheduled once dev sanity is complete. QA environment restored after earlier contamination.</li>
+        </ul>
+      </li>
+      <li><span class="country-tag">Poland:</span> Adidas production fix deployed and testing resumed. Poland schema issue resolved. Fetch flow unblocked.
+        <ul>
+          <li>Three separate blockers resolved in one cycle &mdash; Poland engineering velocity improving.</li>
+        </ul>
+      </li>
+      <li><span class="country-tag">France:</span> PPF Directory (Annuaire) API access now available &mdash; a key milestone for directory integration.
+        <ul>
+          <li>War room operational. Aurify MR 8 posted. AIFE pilot presentation Feb 24 confirmed &mdash; registration done, questions being compiled.</li>
+          <li>Sep 1 mandate may be postponed (news expected at JFE May 5) &mdash; eases immediate pressure if confirmed.</li>
+        </ul>
+      </li>
+      <li><span class="country-tag">France:</span> Aurify kickoff call completed &mdash; contract signed, accreditation target early March.
+        <ul>
+          <li>Workstream realignment proposal being drafted. Evening connect scheduled to align on delivery plan changes.</li>
+        </ul>
+      </li>
+      <li><span class="country-tag">Belgium:</span> Cognizant SAP Ariba breakthrough &mdash; invoices into Ariba without SAP DRC license.
+        <ul>
+          <li>Potential strategic unlock for SAP ecosystem customers. Removes a major integration barrier blocking onboarding for SAP-based enterprises.</li>
+        </ul>
+      </li>
+      <li><span class="country-tag">Cross-cutting:</span> Compliance team joined engineering standups &mdash; improved cross-functional visibility.
+        <ul>
+          <li>BIS 3.0 prod deployment scheduled Feb 22 (Feb 23 deadline).</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ==================== LIVE (PRE GA) ==================== -->
+  <h2 class="section-header">Live (Pre GA) <span class="arrow">&rarr;</span></h2>
+
+  <!-- Belgium -->
+  <div class="country-card rag-amber">
+    <div class="country-card-header">
+      <div class="country-name">
+        <span class="flag">&#x1F1E7;&#x1F1EA;</span> Belgium
+      </div>
+      <div class="rag-badges">
+        <span class="rag-badge amber" data-tip="Combined health across all dimensions">Overall</span>
+        <span class="rag-badge green" data-tip="Regulatory readiness, government approvals, accreditation status"><span class="label">Compliance</span></span>
+        <span class="rag-badge amber" data-tip="Build stability, deployment health, open bugs, technical debt"><span class="label">Engineering</span></span>
+        <span class="rag-badge amber" data-tip="Feature completeness, spec clarity, backlog health"><span class="label">Product</span></span>
+      </div>
+    </div>
+    <div class="country-card-body">
+      <ul>
+        <li>
+          <details class="thread-refs">
+            <summary>30 active issues in Outstanding Issues tracker across 13+ clients. Delvaux (10), Shaw Inc (8), Ascott (8), Havas Media (7) are highest. 9 platform-wide issues affect all clients.</summary>
+            <ul class="thread-list">
+              <li>PDF naming convention &mdash; affects Delvaux, Shaw Inc, Havas Media, Ascott and others</li>
+              <li>Remarks field missing &mdash; affects Delvaux, Shaw Inc, Havas Media, CPP Corp</li>
+              <li>Auto-emails (buyer + purchase) &mdash; affects Delvaux, Shaw Inc, Havas Media</li>
+              <li>Exchange date filter &mdash; affects Delvaux, Shaw Inc, Ascott, Havas Media</li>
+              <li>Sync button &mdash; affects Delvaux, Havas Media, CPP Corp</li>
+              <li>Tax fields (verifying) &mdash; affects Delvaux, Ascott, CPP Corp</li>
+              <li>Sales &amp; purchase reconciliation &mdash; affects Ascott, G2V, SGK</li>
+              <li>Failed invoices report &mdash; affects Delvaux, Shaw Inc</li>
+              <li>Self billing (verifying) &mdash; affects Havas Media, G2V</li>
+            </ul>
+          </details>
+        </li>
+        <li>5 open L3 support tickets: PO reference missing (CPPB), API error inconsistency (Ascott), VAT rate print issue (Hotelkey), BIS acknowledgment stuck (Expleo), self-bill categorization (G2V).</li>
+        <li>Inbound mapping broken on prod &mdash; acknowledged by oncall 44+ hours ago with zero update since.</li>
+        <li>EU portal enhancement tied to 12Cr ARR opportunity &mdash; blocked by G2V onboarding (see Germany).</li>
+      </ul>
+
+      <div class="customer-issues">
+        <div class="customer-status-header">
+          <div class="customer-status-title">Customer Status &amp; Open Issues</div>
+          <div class="customer-status-summary"><span class="count-red">5 Red</span> &middot; <span class="count-amber">4 Amber</span></div>
+        </div>
+        <table class="customer-status">
+          <thead>
+            <tr><th>Customer</th><th>Status</th><th>Comments</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Delvaux</strong></td><td><span class="status-red">Red</span></td><td>10 active issues: PDF naming, remarks, sync button, auto-emails (buyer + purchase), tax fields, export template, import timestamps, exchange date filter, failed invoices report, special character API</td></tr>
+            <tr><td><strong>Shaw Inc</strong></td><td><span class="status-red">Red</span></td><td>8 active issues: PDF naming, remarks, auto-emails (buyer + purchase), asterisk field, exchange date filter, failed invoices report, document status not updating on failure</td></tr>
+            <tr><td><strong>Ascott (M-flie)</strong></td><td><span class="status-red">Red</span></td><td>8 active issues: PDF naming, tax fields, purchase API date, document number API, exchange date filter, line level ordering, advance date field, sales &amp; purchase reconciliation</td></tr>
+            <tr><td><strong>Havas Media</strong></td><td><span class="status-red">Red</span></td><td>7 active issues: PDF naming, remarks, sync button, auto-emails (buyer + purchase), self billing, exchange date filter</td></tr>
+            <tr><td><strong>CPP Corp / CPPB</strong></td><td><span class="status-red">Red</span></td><td>4 active issues: remarks, sync button, tax fields. L3: PO reference + due date missing, BIS acknowledgment stuck</td></tr>
+            <tr><td>G2V</td><td><span class="status-amber">Amber</span></td><td>Self billing, sales &amp; purchase reconciliation. L3: self-bill invoices under Purchase instead of Sales</td></tr>
+            <tr><td>SGK</td><td><span class="status-amber">Amber</span></td><td>Expand fields on purchase invoices, sales &amp; purchase reconciliation</td></tr>
+            <tr><td>UKG</td><td><span class="status-amber">Amber</span></td><td>Payment card field displayed as dropdown instead of free-text</td></tr>
+            <tr><td>Fried Frank</td><td><span class="status-amber">Amber</span></td><td>MIS dashboard data incorrect for sales &amp; purchase</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details class="metrics-toggle">
+        <summary>Metrics <i>(to be automated)</i></summary>
+        <table class="metrics-table">
+          <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr><td>Send Flow (C1 to C4)</td><td>&mdash;</td></tr>
+            <tr><td>Receive Flow</td><td>&mdash;</td></tr>
+            <tr><td>Success Rate</td><td>&mdash;</td></tr>
+          </tbody>
+        </table>
+      </details>
+    </div>
+  </div>
+
+  <!-- Croatia -->
+  <div class="country-card rag-red">
+    <div class="country-card-header">
+      <div class="country-name">
+        <span class="flag">&#x1F1ED;&#x1F1F7;</span> Croatia
+      </div>
+      <div class="rag-badges">
+        <span class="rag-badge red" data-tip="Combined health across all dimensions">Overall</span>
+        <span class="rag-badge red" data-tip="Regulatory readiness, government approvals, accreditation status"><span class="label">Compliance</span></span>
+        <span class="rag-badge red" data-tip="Build stability, deployment health, open bugs, technical debt"><span class="label">Engineering</span></span>
+        <span class="rag-badge amber" data-tip="Feature completeness, spec clarity, backlog health"><span class="label">Product</span></span>
+      </div>
+    </div>
+    <div class="country-card-body">
+      <ul>
+        <li>E-reporting blocked 7+ days &mdash; awaiting engineering response despite daily follow-ups. Reassignment under consideration.</li>
+        <li>March 20 regulatory deadline at risk if block continues. No engineering estimate available.</li>
+      </ul>
+      <p class="no-issues">No customer escalations in reporting period.</p>
+      <details class="metrics-toggle">
+        <summary>Metrics <i>(to be automated)</i></summary>
+        <table class="metrics-table">
+          <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr><td>Send Flow (C1 to C4)</td><td>&mdash;</td></tr>
+            <tr><td>Receive Flow</td><td>&mdash;</td></tr>
+            <tr><td>Success Rate</td><td>&mdash;</td></tr>
+          </tbody>
+        </table>
+      </details>
+    </div>
+  </div>
+
+  <!-- Poland -->
+  <div class="country-card rag-amber">
+    <div class="country-card-header">
+      <div class="country-name">
+        <span class="flag">&#x1F1F5;&#x1F1F1;</span> Poland
+      </div>
+      <div class="rag-badges">
+        <span class="rag-badge amber" data-tip="Combined health across all dimensions">Overall</span>
+        <span class="rag-badge amber" data-tip="Regulatory readiness, government approvals, accreditation status"><span class="label">Compliance</span></span>
+        <span class="rag-badge amber" data-tip="Build stability, deployment health, open bugs, technical debt"><span class="label">Engineering</span></span>
+        <span class="rag-badge amber" data-tip="Feature completeness, spec clarity, backlog health"><span class="label">Product</span></span>
+      </div>
+    </div>
+    <div class="country-card-body">
+      <ul>
+        <li>Adidas prod fix deployed and confirmed &mdash; testing resumed. Residual issue: one older invoice still showing &ldquo;Submitted&rdquo; status. DB PR effort estimate pending.</li>
+        <li>Poland schema issue resolved. Fetch flow unblocked &mdash; receiver ID provided. Validation pending.</li>
+      </ul>
+
+      <div class="customer-issues">
+        <div class="customer-status-header">
+          <div class="customer-status-title">Customer Status &amp; Open Issues</div>
+          <div class="customer-status-summary"><span class="count-amber">1 Amber</span></div>
+        </div>
+        <table class="customer-status">
+          <thead><tr><th>Customer</th><th>Status</th><th>Comments</th></tr></thead>
+          <tbody>
+            <tr><td>Adidas</td><td><span class="status-amber">Amber</span></td><td>Main fix deployed. Residual old invoice stuck at &ldquo;Submitted&rdquo; &mdash; DB PR decision pending. QR codes pointing to Demo in prod needs config fix.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details class="metrics-toggle">
+        <summary>Metrics <i>(to be automated)</i></summary>
+        <table class="metrics-table">
+          <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr><td>Send Flow (C1 to C4)</td><td>&mdash;</td></tr>
+            <tr><td>Receive Flow</td><td>&mdash;</td></tr>
+            <tr><td>Success Rate</td><td>&mdash;</td></tr>
+          </tbody>
+        </table>
+      </details>
+    </div>
+  </div>
+
+  <!-- UAE -->
+  <div class="country-card rag-amber">
+    <div class="country-card-header">
+      <div class="country-name">
+        <span class="flag">&#x1F1E6;&#x1F1EA;</span> UAE (Corner 4)
+      </div>
+      <div class="rag-badges">
+        <span class="rag-badge amber" data-tip="Combined health across all dimensions">Overall</span>
+        <span class="rag-badge amber" data-tip="Regulatory readiness, government approvals, accreditation status"><span class="label">Compliance</span></span>
+        <span class="rag-badge amber" data-tip="Build stability, deployment health, open bugs, technical debt"><span class="label">Engineering</span></span>
+        <span class="rag-badge amber" data-tip="Feature completeness, spec clarity, backlog health"><span class="label">Product</span></span>
+      </div>
+    </div>
+    <div class="country-card-body">
+      <ul>
+        <li>C5 development completed. QA handover call to be scheduled once dev sanity is complete. Demo Thursday if no P0.</li>
+        <li>QA environment was contaminated earlier today by dev deployment &mdash; reverted within 42 minutes. Process guardrail communicated.</li>
+        <li>Revenue remains Red &mdash; Yardi integration pending, Savvy Games GL recon blocked since Oct 2025.</li>
+      </ul>
+      <p class="no-issues">No customer escalations in reporting period.</p>
+      <details class="metrics-toggle">
+        <summary>Metrics <i>(to be automated)</i></summary>
+        <table class="metrics-table">
+          <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr><td>Send Flow (C1 to C4)</td><td>&mdash;</td></tr>
+            <tr><td>Receive Flow</td><td>&mdash;</td></tr>
+            <tr><td>Success Rate</td><td>&mdash;</td></tr>
+          </tbody>
+        </table>
+      </details>
+    </div>
+  </div>
+
+  <!-- Germany -->
+  <div class="country-card rag-red">
+    <div class="country-card-header">
+      <div class="country-name">
+        <span class="flag">&#x1F1E9;&#x1F1EA;</span> Germany
+      </div>
+      <div class="rag-badges">
+        <span class="rag-badge red" data-tip="Combined health across all dimensions">Overall</span>
+        <span class="rag-badge amber" data-tip="Regulatory readiness, government approvals, accreditation status"><span class="label">Compliance</span></span>
+        <span class="rag-badge red" data-tip="Build stability, deployment health, open bugs, technical debt"><span class="label">Engineering</span></span>
+        <span class="rag-badge red" data-tip="Feature completeness, spec clarity, backlog health"><span class="label">Product</span></span>
+      </div>
+    </div>
+    <div class="country-card-body">
+      <ul>
+        <li>G2V refusing to proceed until AP tracking feature is built. Hard customer block &mdash; onboarding pushed 2 weeks. Tied to 12Cr ARR EU portal enhancement.</li>
+        <li>Dev assignment resolved &mdash; engineering capacity being allocated. ETA Feb 25.</li>
+        <li>BIS 3.0 starting &mdash; adds engineering load while customer issues remain open. Prod deployment scheduled Feb 22.</li>
+      </ul>
+
+      <div class="customer-issues">
+        <div class="customer-status-header">
+          <div class="customer-status-title">Customer Status &amp; Open Issues</div>
+          <div class="customer-status-summary"><span class="count-red">3 Red</span></div>
+        </div>
+        <table class="customer-status">
+          <thead><tr><th>Customer</th><th>Status</th><th>Comments</th></tr></thead>
+          <tbody>
+            <tr><td><strong>HID Global</strong></td><td><span class="status-red">Red</span></td><td>9 open issues: ingestion template, error messages, PDF naming/data, XML/report downloads, UI issues, line item identifier, sandbox XML, unnecessary UI fields</td></tr>
+            <tr><td><strong>SGK</strong></td><td><span class="status-red">Red</span></td><td>6 open issues: ingestion template, error messages, PDF naming/data, XML downloads, UI issues</td></tr>
+            <tr><td><strong>K&amp;S</strong></td><td><span class="status-red">Red</span></td><td>6 open issues: ingestion template, error messages, PDF naming/data, XML downloads, UI issues</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details class="metrics-toggle">
+        <summary>Metrics <i>(to be automated)</i></summary>
+        <table class="metrics-table">
+          <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr><td>Send Flow (C1 to C4)</td><td>&mdash;</td></tr>
+            <tr><td>Receive Flow</td><td>&mdash;</td></tr>
+            <tr><td>Success Rate</td><td>&mdash;</td></tr>
+          </tbody>
+        </table>
+      </details>
+    </div>
+  </div>
+
+  <!-- ==================== UPCOMING LAUNCH ==================== -->
+  <h2 class="section-header">Upcoming Launch <span class="arrow">&rarr;</span></h2>
+
+  <!-- France -->
+  <div class="country-card rag-amber">
+    <div class="country-card-header">
+      <div class="country-name">
+        <span class="flag">&#x1F1EB;&#x1F1F7;</span> France
+        <span class="country-annotation">&mdash; Upcoming Launch</span>
+      </div>
+      <div class="rag-badges">
+        <span class="rag-badge amber" data-tip="Combined health across all dimensions">Overall</span>
+        <span class="rag-badge amber" data-tip="Regulatory readiness, government approvals, accreditation status"><span class="label">Accreditation</span></span>
+      </div>
+    </div>
+    <div class="country-card-body">
+      <ul>
+        <li>AIFE has not received ClearTax connection sheets for PROD EDI and Qualification. Blocks France testing pipeline. Needs immediate assignment.</li>
+        <li>Aurify kickoff completed. Key outcome: Aurify will not onboard another PDP for interoperability testing (conflict of interest). Search for partner PDP underway through existing contacts.</li>
+        <li>EDI certification (RGS or eIDAS QWAC) identified as prerequisite for PPF connection. Team evaluating whether self-signed is accepted or external CA required.</li>
+        <li>PPF Directory (Annuaire) API access now available. AIFE pilot presentation Feb 24 &mdash; registration confirmed.</li>
+        <li>Sep 1 mandate may be postponed (news expected at JFE May 5).</li>
+        <li>Workstream realignment proposal being drafted. Evening connect scheduled to align on delivery plan changes post-Aurify.</li>
+        <li>7 product items still pending &mdash; blocking e-reporting and B2B flows.</li>
+      </ul>
+
+      <div class="path-to-green">
+        <strong>Path to Green:</strong> Find partner PDP for interoperability testing. Submit AIFE connection sheets immediately. Secure EDI certificate (RGS/eIDAS). Deliver 7 blocking product items. Start PPF Directory API integration.
+      </div>
+
+      <div class="key-stakeholders">
+        <strong>Key Stakeholders:</strong>
+        <ul class="stakeholder-list">
+          <li><span class="stakeholder-name">Aurify</span> <span class="stakeholder-country">(Belgium)</span> &mdash; Kickoff done, accreditation target early March, MR 8 posted. Cannot provide PDP for interop testing.</li>
+          <li><span class="stakeholder-name">Iopole</span> <span class="stakeholder-country">(France)</span> &mdash; PA registration discussions ongoing. Offering accredited PA, white-label, 10-day TAT.</li>
+          <li><span class="stakeholder-name">AIFE</span> <span class="stakeholder-country">(France)</span> &mdash; Pilot Feb 24. Connection sheets missing. Levee des Reserves exchange meetings ongoing.</li>
+          <li><span class="stakeholder-name">S3NS</span> <span class="stakeholder-country">(France)</span> &mdash; SecNumCloud certificates received for France PDP hosting.</li>
+        </ul>
+      </div>
+
+      <p class="no-issues">No customer escalations in reporting period.</p>
+    </div>
+  </div>
+
+  <!-- Singapore -->
+  <div class="country-card rag-none">
+    <div class="country-card-header">
+      <div class="country-name">
+        <span class="flag">&#x1F1F8;&#x1F1EC;</span> Singapore
+        <span class="country-annotation">&mdash; Upcoming Launch</span>
+      </div>
+      <div class="rag-badges">
+        <span class="rag-badge no-data" data-tip="Combined health across all dimensions">Overall</span>
+      </div>
+    </div>
+    <div class="country-card-body">
+      <ul>
+        <li>No significant Slack activity or email updates in the reporting window.</li>
+      </ul>
+      <div class="path-to-green">
+        <strong>Path to Green:</strong> Re-establish visibility on Singapore progress. Confirm InvoiceNow/PEPPOL-SG timeline.
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== NEXT IN PIPELINE ==================== -->
+  <h2 class="section-header">Next in Pipeline <span class="arrow">&rarr;</span></h2>
+
+  <table class="pipeline-table">
+    <thead>
+      <tr><th>Country</th><th>Status</th><th>Key Update</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>&#x1F1EF;&#x1F1F4; Jordan</td><td><span class="pipeline-status">Discovery</span></td><td>InvoiceQ preferred over BDO. Regional expert meeting outcome pending. MAF deal volumes (7M committed) awaiting Sales.</td></tr>
+      <tr><td>&#x1F1EA;&#x1F1EC; Egypt</td><td><span class="pipeline-status">Discovery</span></td><td>Bundled with Jordan evaluation. InvoiceQ being assessed for both.</td></tr>
+      <tr><td>&#x1F1F6;&#x1F1E6; Qatar</td><td><span class="pipeline-status">Discovery</span></td><td>No updates this period.</td></tr>
+      <tr><td>&#x1F1F4;&#x1F1F2; Oman</td><td><span class="pipeline-status">Discovery</span></td><td>OTA workshop was scheduled Feb 18.</td></tr>
+      <tr><td>&#x1F1F5;&#x1F1ED; Philippines</td><td><span class="pipeline-status">Discovery</span></td><td>No updates this period.</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ==================== LIVE (POST GA) ==================== -->
+  <h2 class="section-header">Live (Post GA) <span class="arrow">&rarr;</span></h2>
+
+  <!-- India -->
+  <div class="country-card rag-red">
+    <div class="country-card-header">
+      <div class="country-name">
+        <span class="flag">&#x1F1EE;&#x1F1F3;</span> India
+      </div>
+      <div class="rag-badges">
+        <span class="rag-badge red" data-tip="Combined health across all dimensions">Overall</span>
+      </div>
+    </div>
+    <div class="country-card-body">
+      <ul>
+        <li>Aramco PDF rejection P0 &mdash; IKK Group CIO threatening vendor switch. 108M SAR invoice blocked. Missing /EmbeddedFiles metadata key identified. Impacts all KSA clients uploading to Aramco portal. Engineering fix targeting next deployment.</li>
+        <li>Redis SEV-1 still triggered &mdash; root cause is missing rate limiting on IRP. No permanent fix timeline.</li>
+        <li>IRN grace period errors &mdash; stale since Dec 2023. NIC enforcing 30-day limit. Production customers hitting errors.</li>
+        <li>Retool audit tool broken since Feb 11 &mdash; blocks L2 support tooling for all GSTINs.</li>
+      </ul>
+
+      <div class="customer-issues">
+        <div class="customer-status-header">
+          <div class="customer-status-title">Customer Status &amp; Open Issues</div>
+          <div class="customer-status-summary"><span class="count-red">3 Red</span> &middot; <span class="count-amber">2 Amber</span></div>
+        </div>
+        <table class="customer-status">
+          <thead><tr><th>Customer</th><th>Status</th><th>Comments</th></tr></thead>
+          <tbody>
+            <tr><td><strong>IKK Group / Aramco PDF</strong></td><td><span class="status-red">Red</span></td><td>108M SAR invoice blocked. CIO threatening vendor switch. PDF metadata lacks /EmbeddedFiles key for Aramco&rsquo;s new Jan 1 validation. Impacts ~10+ customers.</td></tr>
+            <tr><td><strong>IRN Cancellation (NIC)</strong></td><td><span class="status-red">Red</span></td><td>~20 cases in 9 days. Grace period enforcement affecting &gt;10 Cr suppliers.</td></tr>
+            <tr><td><strong>Retool Audit Tool</strong></td><td><span class="status-red">Red</span></td><td>Broken since Feb 11 &mdash; blocks L2 support tooling for all GSTINs.</td></tr>
+            <tr><td>Alstom (EWB Archive)</td><td><span class="status-amber">Amber</span></td><td>Download failing across all date ranges. 6 days stale &mdash; investigation paused pending sample data.</td></tr>
+            <tr><td>Client 499 (ERP)</td><td><span class="status-amber">Amber</span></td><td>Integration team handoff stuck 40+ hours.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details class="metrics-toggle">
+        <summary>Metrics <i>(to be automated)</i></summary>
+        <table class="metrics-table">
+          <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr><td>ARR (crores)</td><td>&mdash;</td></tr>
+            <tr><td>Live Customers</td><td>&mdash;</td></tr>
+            <tr><td>Support Tickets</td><td>&mdash;</td></tr>
+            <tr><td>Avg Response Time (ms)</td><td>&mdash;</td></tr>
+            <tr><td>p99 Response Time (ms)</td><td>&mdash;</td></tr>
+            <tr><td>Success Rate</td><td>&mdash;</td></tr>
+          </tbody>
+        </table>
+      </details>
+    </div>
+  </div>
+
+  <!-- Malaysia -->
+  <div class="country-card rag-amber">
+    <div class="country-card-header">
+      <div class="country-name">
+        <span class="flag">&#x1F1F2;&#x1F1FE;</span> Malaysia
+      </div>
+      <div class="rag-badges">
+        <span class="rag-badge amber" data-tip="Combined health across all dimensions">Overall</span>
+      </div>
+    </div>
+    <div class="country-card-body">
+      <ul>
+        <li>4 open L3 support tickets. Shipping TIN validation issue (Vanity Group) has had zero engineering response despite 4 follow-ups over 3 days &mdash; critical ownership gap.</li>
+        <li>Document total mismatch (Peikko) not validated &mdash; LHDN accepted incorrect totals. Raises question on ClearTax pre-submission validation.</li>
+        <li>Media Prima line item print issue &mdash; related JIRA was assumed resolved but is not. 6 days old.</li>
+      </ul>
+
+      <div class="customer-issues">
+        <div class="customer-status-header">
+          <div class="customer-status-title">Customer Status &amp; Open Issues</div>
+          <div class="customer-status-summary"><span class="count-red">1 Red</span> &middot; <span class="count-amber">3 Amber</span></div>
+        </div>
+        <table class="customer-status">
+          <thead><tr><th>Customer</th><th>Status</th><th>Comments</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Vanity Group</strong></td><td><span class="status-red">Red</span></td><td>Shipping TIN &ldquo;NA&rdquo; now rejected &mdash; 4 follow-ups, zero engineering response. Possible LHDN validation change.</td></tr>
+            <tr><td>Peikko</td><td><span class="status-amber">Amber</span></td><td>Document totals don&rsquo;t match line items &mdash; LHDN accepted anyway. No ClearTax validation caught it.</td></tr>
+            <tr><td>Media Prima</td><td><span class="status-amber">Amber</span></td><td>Print showing single line item instead of multiple. JIRA assumed resolved but is not. 6 days old.</td></tr>
+            <tr><td>Monash University</td><td><span class="status-amber">Amber</span></td><td>Auto email triggered despite B2B disabled in sandbox. Awaiting engineering pickup.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details class="metrics-toggle">
+        <summary>Metrics <i>(to be automated)</i></summary>
+        <table class="metrics-table">
+          <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr><td>ARR (crores)</td><td>&mdash;</td></tr>
+            <tr><td>Support Tickets</td><td>&mdash;</td></tr>
+            <tr><td>Success Rate</td><td>&mdash;</td></tr>
+          </tbody>
+        </table>
+      </details>
+    </div>
+  </div>
+
+  <!-- KSA -->
+  <div class="country-card rag-red">
+    <div class="country-card-header">
+      <div class="country-name">
+        <span class="flag">&#x1F1F8;&#x1F1E6;</span> KSA
+      </div>
+      <div class="rag-badges">
+        <span class="rag-badge red" data-tip="Combined health across all dimensions">Overall</span>
+      </div>
+    </div>
+    <div class="country-card-body">
+      <ul>
+        <li>Aramco PDF/A issue now P0 &mdash; IKK Group escalation (see India section). Impacts ~10+ KSA customers uploading PDFs to Aramco portal. Manual workaround exists but not scalable.</li>
+        <li>Qiddiya rounding decimal validation blocking 6 invoices from ZATCA submission. ZATCA agreed to disable blocking validation; implementation pending alignment.</li>
+        <li>Lulu reconciliation mismatch &mdash; analysis in progress (40 lakh rows).</li>
+      </ul>
+
+      <div class="customer-issues">
+        <div class="customer-status-header">
+          <div class="customer-status-title">Customer Status &amp; Open Issues</div>
+          <div class="customer-status-summary"><span class="count-red">2 Red</span> &middot; <span class="count-amber">1 Amber</span></div>
+        </div>
+        <table class="customer-status">
+          <thead><tr><th>Customer</th><th>Status</th><th>Comments</th></tr></thead>
+          <tbody>
+            <tr><td><strong>IKK Group / Aramco PDF</strong></td><td><span class="status-red">Red</span></td><td>108M SAR blocked. CIO threatening vendor switch. /EmbeddedFiles metadata key missing from ClearTax PDFs. Impacts all Aramco portal uploads.</td></tr>
+            <tr><td><strong>Qiddiya</strong></td><td><span class="status-red">Red</span></td><td>6 invoices blocked on rounding validation. ZATCA agreed to disable blocking &mdash; implementation pending.</td></tr>
+            <tr><td>Lulu</td><td><span class="status-amber">Amber</span></td><td>Reconciliation mismatch &mdash; cleared invoices showing &ldquo;Missing in EINV&rdquo;. Analysis in progress.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details class="metrics-toggle">
+        <summary>Metrics <i>(to be automated)</i></summary>
+        <table class="metrics-table">
+          <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr><td>ARR (crores)</td><td>&mdash;</td></tr>
+            <tr><td>Support Tickets</td><td>&mdash;</td></tr>
+            <tr><td>Success Rate</td><td>&mdash;</td></tr>
+          </tbody>
+        </table>
+      </details>
+    </div>
+  </div>
+
+  <!-- ==================== EXTERNAL STAKEHOLDER UPDATES ==================== -->
+  <h2 class="section-header">External Stakeholder Updates <span class="arrow">&rarr;</span></h2>
+
+  <ul>
+    <li><strong>IKK Group / Aramco &mdash; KSA:</strong> CIO threatening vendor switch. 108M SAR invoice blocked. Aramco introduced new PDF validation (Jan 1). Three customers confirmed (IKK, Emerson Saudi, Alkhorayef). No Aramco meeting possible &mdash; must fix unilaterally.</li>
+    <li><strong>AIFE &mdash; France:</strong> Two emails confirming ClearTax PROD EDI and Qualification connection sheets have not been received. Blocking testing pipeline.</li>
+    <li><strong>AIFE Levee des Reserves &mdash; France:</strong> Regular Tuesday exchange meeting for platforms undergoing lifting of reservations. ClearTax invited &mdash; needs representation.</li>
+    <li><strong>Aurify &mdash; France:</strong> Kickoff completed. Contract signed. Cannot provide PDP for interop testing (conflict of interest). ClearTax must find partner PDP independently.</li>
+    <li><strong>Iopole &mdash; France:</strong> Discussion happened. Offering accredited PA, white-label, 10-day TAT for PA registration.</li>
+    <li><strong>Unicommerce &mdash; India:</strong> API integration meetings happened. Expectations discussion set up separately.</li>
+    <li><strong>Future Processing &mdash; Poland:</strong> Vendor partner re-engagement after delay.</li>
+    <li><strong>S3NS/SecNumCloud &mdash; France:</strong> Qualification certificates received from Google Cloud&rsquo;s French sovereign cloud.</li>
+    <li><strong>Savvy Games &mdash; UAE:</strong> GL recon blocked since Oct 2025. Escalated to Engineo CEO. AP-to-XLA linkage unresolved.</li>
+    <li><strong>Yardi &mdash; UAE:</strong> Integration pending. No timeline from Yardi side.</li>
+    <li><strong>Cognizant &mdash; Belgium:</strong> SAP Ariba breakthrough &mdash; found way to land invoices without DRC license.</li>
+  </ul>
+
+  <!-- ==================== EINVOICING++ & PLATFORM ==================== -->
+  <h2 class="section-header">eInvoicing++ &amp; Platform Updates <span class="arrow">&rarr;</span></h2>
+
+  <ul class="platform-list">
+    <li><strong>France Workstream Realignment:</strong> Evening connect scheduled to align on delivery plan changes post-Aurify kickoff. Proposal being drafted.</li>
+    <li><strong>France EDI Certification:</strong> RGS or eIDAS QWAC certificate identified as prerequisite for PPF connection. Team evaluating options.</li>
+    <li><strong>QA Environment Governance:</strong> Dev version deployed on UAE QA, broke all Peppol docs. Reverted in 42 min. Process guardrail communicated.</li>
+    <li><strong>BIS 3.0:</strong> Prod deployment scheduled Sun Feb 22. BIS-only (no PINT). Feb 23 deadline.</li>
+    <li><strong>EU Portal Enhancement:</strong> 12Cr ARR opportunity. G2V churn risk. ETA committed by mid-next week.</li>
+    <li><strong>Contract Testers:</strong> 3 contract functional testers approval still pending since Feb 10.</li>
+    <li><strong>Compliance Standup:</strong> Compliance team now joining engineering standups. Improved cross-functional visibility.</li>
+    <li><strong>Redis/IRP Rate Limiting:</strong> Critical infrastructure gap causing repeated SEV-1 incidents. Needs architectural fix.</li>
+  </ul>
+
+  <!-- ==================== MOVEMENT SINCE LAST REPORT ==================== -->
+  <h2 class="section-header">Movement Since Last Report <span class="arrow">&rarr;</span></h2>
+
+  <table class="movement-table">
+    <thead>
+      <tr><th>Country</th><th>Previous RAG</th><th>Current RAG</th><th>Key Change</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>France</td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot amber" title="Amber"></span></td><td>Aurify kickoff done &mdash; cannot provide PDP for interop (new risk). XSD/schematron clarified. EDI cert requirement identified. Workstream realignment underway.</td></tr>
+      <tr><td>KSA</td><td><span class="rag-dot red" title="Red"></span></td><td><span class="rag-dot red" title="Red"></span></td><td>IKK Group P0 persists. No change.</td></tr>
+      <tr><td>India</td><td><span class="rag-dot red" title="Red"></span></td><td><span class="rag-dot red" title="Red"></span></td><td>Aramco PDF/A and Redis SEV-1 persist. No change.</td></tr>
+      <tr><td>Croatia</td><td><span class="rag-dot red" title="Red"></span></td><td><span class="rag-dot red" title="Red"></span></td><td>E-reporting blocked 7+ days. No change.</td></tr>
+      <tr><td>Germany</td><td><span class="rag-dot red" title="Red"></span></td><td><span class="rag-dot red" title="Red"></span></td><td>Dev assignment resolved. Customer issues unchanged.</td></tr>
+      <tr><td>Belgium</td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot amber" title="Amber"></span></td><td>30 active issues. Inbound mapping still unresolved.</td></tr>
+      <tr><td>Poland</td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot amber" title="Amber"></span></td><td>Adidas fix deployed. Residual old invoice issue pending.</td></tr>
+      <tr><td>UAE</td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot amber" title="Amber"></span></td><td>C5 complete. QA contamination reverted. Handover call being scheduled.</td></tr>
+      <tr><td>Malaysia</td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot amber" title="Amber"></span></td><td>4 open tickets. Shipping TIN still unresolved.</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ==================== HEALTH MATRIX ==================== -->
+  <h2 class="section-header">Appendix: Country Health Matrix <span class="arrow">&rarr;</span></h2>
+
+  <table class="health-matrix">
+    <thead>
+      <tr><th>Country</th><th>Category</th><th>Compliance</th><th>Product</th><th>Engineering</th><th>Delivery</th><th>Overall</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>India</td><td>Post GA</td><td><span class="rag-dot green" title="Green"></span></td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot red" title="Red"></span></td><td><span class="rag-dot red" title="Red"></span></td><td><span class="rag-dot red" title="Red"></span></td></tr>
+      <tr><td>Malaysia</td><td>Post GA</td><td><span class="rag-dot green" title="Green"></span></td><td><span class="rag-dot green" title="Green"></span></td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot amber" title="Amber"></span></td></tr>
+      <tr><td>KSA</td><td>Post GA</td><td><span class="rag-dot green" title="Green"></span></td><td><span class="rag-dot green" title="Green"></span></td><td><span class="rag-dot red" title="Red"></span></td><td><span class="rag-dot red" title="Red"></span></td><td><span class="rag-dot red" title="Red"></span></td></tr>
+      <tr><td>Belgium</td><td>Pre GA</td><td><span class="rag-dot green" title="Green"></span></td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot amber" title="Amber"></span></td></tr>
+      <tr><td>Croatia</td><td>Pre GA</td><td><span class="rag-dot red" title="Red"></span></td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot red" title="Red"></span></td><td><span class="rag-dot red" title="Red"></span></td><td><span class="rag-dot red" title="Red"></span></td></tr>
+      <tr><td>Poland</td><td>Pre GA</td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot amber" title="Amber"></span></td></tr>
+      <tr><td>UAE</td><td>Pre GA</td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot amber" title="Amber"></span></td></tr>
+      <tr><td>Germany</td><td>Pre GA</td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot red" title="Red"></span></td><td><span class="rag-dot red" title="Red"></span></td><td><span class="rag-dot red" title="Red"></span></td><td><span class="rag-dot red" title="Red"></span></td></tr>
+      <tr><td>France</td><td>Upcoming</td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot amber" title="Amber"></span></td><td><span class="rag-dot amber" title="Amber"></span></td></tr>
+      <tr><td>Singapore</td><td>Upcoming</td><td><span class="rag-dot none" title="No data"></span></td><td><span class="rag-dot none" title="No data"></span></td><td><span class="rag-dot none" title="No data"></span></td><td><span class="rag-dot none" title="No data"></span></td><td><span class="rag-dot none" title="No data"></span></td></tr>
+      <tr><td>Jordan</td><td>Pipeline</td><td><span class="rag-dot none" title="No data"></span></td><td><span class="rag-dot none" title="No data"></span></td><td><span class="rag-dot none" title="No data"></span></td><td><span class="rag-dot none" title="No data"></span></td><td><span class="rag-dot none" title="No data"></span></td></tr>
+      <tr><td>Egypt</td><td>Pipeline</td><td><span class="rag-dot none" title="No data"></span></td><td><span class="rag-dot none" title="No data"></span></td><td><span class="rag-dot none" title="No data"></span></td><td><span class="rag-dot none" title="No data"></span></td><td><span class="rag-dot none" title="No data"></span></td></tr>
+    </tbody>
+  </table>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="report-footer">
+    <p>Generated by eInvoice Bot &middot; 17 Feb 2026 at 23:45 IST &middot; Data sources: Slack (17 channels), Email (4 digests), Support (10 open tickets), Outstanding Issues Tracker</p>
+  </footer>
+
+</body>
+</html>
