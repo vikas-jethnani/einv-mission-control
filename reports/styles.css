@@ -557,13 +557,16 @@ details.thread-refs summary {
 details.thread-refs summary::-webkit-details-marker { display: none; }
 
 details.thread-refs summary::before {
-  content: "▸ ";
-  color: var(--gray-light);
-  font-size: 0.75em;
+  content: "▶ ";
+  color: var(--blue);
+  font-size: 0.85em;
+  font-weight: 700;
+  margin-right: 2px;
+  transition: transform 0.15s ease;
 }
 
 details.thread-refs[open] summary::before {
-  content: "▾ ";
+  content: "▼ ";
 }
 
 ul.thread-list {
@@ -609,12 +612,15 @@ details.metrics-toggle summary {
 details.metrics-toggle summary::-webkit-details-marker { display: none; }
 
 details.metrics-toggle summary::before {
-  content: "▸ ";
-  color: var(--gray-light);
+  content: "▶ ";
+  color: var(--blue);
+  font-size: 0.85em;
+  font-weight: 700;
+  margin-right: 2px;
 }
 
 details.metrics-toggle[open] summary::before {
-  content: "▾ ";
+  content: "▼ ";
 }
 
 .metrics-table {

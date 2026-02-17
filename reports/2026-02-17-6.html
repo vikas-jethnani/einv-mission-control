@@ -44,11 +44,36 @@
   <div class="callout-section blockers">
     <h2>Critical Blockers</h2>
     <ul>
-      <li><span class="country-tag">KSA:</span> <a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1771186153147159">Aramco PDF rejection</a> P0 &mdash; IKK Group CIO threatening vendor switch over 108M SAR blocked invoice. Aramco introduced new validation (Jan 1) requiring /EmbeddedFiles metadata key. Impacts all KSA clients uploading PDFs to Aramco portal. Fix in progress.</li>
-      <li><span class="country-tag">India:</span> Redis SEV-1 still triggering &mdash; root cause is missing rate limiting on IRP. No permanent fix timeline. PagerDuty alert remains active.</li>
-      <li><span class="country-tag">Croatia:</span> <a href="https://cleartaxtech.slack.com/archives/C0924T2LL1H/p1770879816645079">E-reporting blocked 7+ days</a> &mdash; awaiting engineering response despite daily follow-ups. March 20 regulatory deadline at risk. Reassignment under consideration.</li>
-      <li><span class="country-tag">Germany:</span> G2V refusing to onboard until AP tracking feature is built. 9+ open issues across HID Global, SGK, K&amp;S. <a href="https://cleartaxtech.slack.com/archives/C09D9HEP8JK/p1771230249559559">Engineering capacity being allocated</a> (ETA Feb 25).</li>
-      <li><span class="country-tag">France:</span> AIFE says they haven&rsquo;t received ClearTax connection sheets (fiches raccordement) for PROD EDI and Qualification channels. Blocks France testing. <a href="https://cleartaxtech.slack.com/archives/C0A1JAWJB3M/p1771223790702379">7 product items still pending</a>.</li>
+      <li><span class="country-tag">KSA:</span> <a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1771186153147159">Aramco PDF rejection</a> &mdash; P0 escalation. IKK Group CIO threatening vendor switch over 108M SAR blocked invoice.
+        <ul>
+          <li>Aramco introduced new validation (Jan 1) requiring /EmbeddedFiles metadata key in uploaded PDFs. Impacts all KSA clients uploading to Aramco portal (~10+ customers confirmed).</li>
+          <li>Manual workaround exists (Adobe Pro XML fix) but not scalable. Engineering fix targeting next deployment.</li>
+        </ul>
+      </li>
+      <li><span class="country-tag">India:</span> Redis SEV-1 still triggering &mdash; root cause is missing rate limiting on IRP.
+        <ul>
+          <li>No permanent fix timeline communicated. PagerDuty alert remains active. Repeated incidents degrading platform reliability.</li>
+          <li>Incident response capacity reduced due to team availability constraints.</li>
+        </ul>
+      </li>
+      <li><span class="country-tag">Croatia:</span> <a href="https://cleartaxtech.slack.com/archives/C0924T2LL1H/p1770879816645079">E-reporting blocked 7+ days</a> &mdash; awaiting engineering response despite daily follow-ups.
+        <ul>
+          <li>March 20 regulatory deadline at risk &mdash; compliance gap if e-reporting is not delivered on time.</li>
+          <li>Primary owner hospitalized. Reassignment under consideration but not confirmed.</li>
+        </ul>
+      </li>
+      <li><span class="country-tag">Germany:</span> G2V refusing to onboard until AP tracking feature is built &mdash; hard customer block.
+        <ul>
+          <li>Onboarding pushed by 2 weeks. Tied to 12Cr ARR EU portal enhancement opportunity. Churn risk if unresolved.</li>
+          <li>9+ open issues across HID Global, SGK, K&amp;S. <a href="https://cleartaxtech.slack.com/archives/C09D9HEP8JK/p1771230249559559">Engineering capacity being allocated</a> (ETA Feb 25).</li>
+        </ul>
+      </li>
+      <li><span class="country-tag">France:</span> AIFE says they haven&rsquo;t received ClearTax connection sheets (fiches raccordement) for PROD EDI and Qualification channels.
+        <ul>
+          <li>Blocks France testing pipeline entirely. Connection sheets need immediate submission.</li>
+          <li><a href="https://cleartaxtech.slack.com/archives/C0A1JAWJB3M/p1771223790702379">7 product items still pending</a> &mdash; blocking e-reporting and B2B flows.</li>
+        </ul>
+      </li>
     </ul>
   </div>
 
@@ -56,28 +81,31 @@
   <div class="callout-section highlights">
     <h2>Highlights</h2>
     <ul>
-      <li><span class="country-tag">UAE:</span> Corner 5 development completed. <a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1771217195937419">Demo PRs ready</a>. QA handover call being scheduled.</li>
-      <li><span class="country-tag">Poland:</span> <a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1770898199301949">Adidas prod fix deployed</a> and testing resumed. <a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1771241274985599">Poland schema issue resolved</a>. Fetch flow unblocked.</li>
-      <li>
-        <details class="thread-refs">
-          <summary><span class="country-tag">France:</span> PPF Directory (Annuaire) API access now available. War room operational. Dev env progressing. Aurify MR 8 posted. AIFE pilot Feb 24 confirmed.</summary>
-          <ul class="thread-list">
-            <li><a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1771250306626219">Dev env progress</a></li>
-            <li><a href="https://cleartaxtech.slack.com/archives/C0A1JAWJB3M/p1771220672211459">Aurify kickoff &amp; MR 8</a></li>
-            <li><a href="https://cleartaxtech.slack.com/archives/C0A1JAWJB3M/p1771223790702379">France pending items</a></li>
-          </ul>
-        </details>
+      <li><span class="country-tag">UAE:</span> Corner 5 (C5) development completed &mdash; final integration layer required by FTA for full e-invoicing compliance.
+        <ul>
+          <li>Demo PRs ready. QA handover call being scheduled for Thursday (if no P0 found in testing).</li>
+        </ul>
       </li>
-      <li><span class="country-tag">Belgium:</span> Cognizant SAP Ariba breakthrough &mdash; invoices into Ariba without SAP DRC license. Potential strategic unlock.</li>
-      <li>
-        <details class="thread-refs">
-          <summary><span class="country-tag">Cross-cutting:</span> Compliance team joined engineering standups. BIS 3.0 prod deployment scheduled Feb 22. Metabase CDC data audit completed &mdash; schema gaps documented.</summary>
-          <ul class="thread-list">
-            <li><a href="https://cleartaxtech.slack.com/archives/C0A9ESYUSQY/p1771217018879379">Compliance standup format</a></li>
-            <li><a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1770798628131439">BIS 3.0 deployment</a></li>
-            <li><a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1771217056328409">Metabase CDC audit</a></li>
-          </ul>
-        </details>
+      <li><span class="country-tag">Poland:</span> Adidas production fix deployed and testing resumed. Poland schema issue resolved. Fetch flow unblocked.
+        <ul>
+          <li>Three separate blockers resolved in one cycle &mdash; Poland engineering velocity improving.</li>
+        </ul>
+      </li>
+      <li><span class="country-tag">France:</span> PPF Directory (Annuaire) API access now available &mdash; a key milestone for directory integration.
+        <ul>
+          <li>War room operational. Aurify MR 8 posted. AIFE pilot presentation Feb 24 confirmed &mdash; registration done, questions being compiled.</li>
+          <li>Sep 1 mandate may be postponed (news expected at JFE May 5) &mdash; eases immediate pressure if confirmed.</li>
+        </ul>
+      </li>
+      <li><span class="country-tag">Belgium:</span> Cognizant SAP Ariba breakthrough &mdash; invoices into Ariba without SAP DRC license.
+        <ul>
+          <li>Potential strategic unlock for SAP ecosystem customers. Removes a major integration barrier that was blocking onboarding for SAP-based enterprises.</li>
+        </ul>
+      </li>
+      <li><span class="country-tag">Cross-cutting:</span> Compliance team joined engineering standups &mdash; improved cross-functional visibility.
+        <ul>
+          <li>BIS 3.0 prod deployment scheduled Feb 22 (Feb 23 deadline). Metabase CDC data audit completed &mdash; schema gaps documented for remediation.</li>
+        </ul>
       </li>
     </ul>
   </div>
@@ -100,7 +128,20 @@
     </div>
     <div class="country-card-body">
       <ul>
-        <li>30 active issues in Outstanding Issues tracker across 13+ clients. Delvaux (10), Shaw Inc (8), Ascott (8), Havas Media (7) are highest. PDF naming, remarks, auto-emails, exchange date filter, and reconciliation features span most clients. 9 platform-wide issues affect all clients.</li>
+        <li>
+          <details class="thread-refs">
+            <summary>30 active issues in Outstanding Issues tracker across 13+ clients. Delvaux (10), Shaw Inc (8), Ascott (8), Havas Media (7) are highest. 9 platform-wide issues affect all clients.</summary>
+            <ul class="thread-list">
+              <li>PDF naming convention &mdash; affects Delvaux, Shaw Inc, Havas Media, Ascott and others</li>
+              <li>Remarks field missing &mdash; affects Delvaux, Shaw Inc, Havas Media, CPP Corp</li>
+              <li>Auto-emails (buyer + purchase) &mdash; affects Delvaux, Shaw Inc, Havas Media</li>
+              <li>Exchange date filter &mdash; affects Delvaux, Shaw Inc, Ascott, Havas Media</li>
+              <li>Sales &amp; purchase reconciliation &mdash; affects Ascott, G2V, SGK</li>
+              <li>Sync button &mdash; affects Delvaux, Havas Media, CPP Corp</li>
+              <li>Tax fields (verifying) &mdash; affects Delvaux, Ascott, CPP Corp</li>
+            </ul>
+          </details>
+        </li>
         <li>5 open L3 support tickets: PO reference missing (CPPB), API error inconsistency (Ascott), VAT rate print issue (Hotelkey), BIS acknowledgment stuck (Expleo), self-bill categorization (G2V).</li>
         <li><a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1771228297303749">Belgium inbound mapping broken</a> on prod &mdash; oncall acknowledged 44+ hours ago, zero update since.</li>
         <li>EU portal enhancement tied to 12Cr ARR opportunity &mdash; blocked by G2V onboarding (see Germany).</li>
@@ -160,7 +201,7 @@
         <li><a href="https://cleartaxtech.slack.com/archives/C0924T2LL1H/p1770879816645079">E-reporting blocked 7+ days</a> &mdash; awaiting engineering response despite daily follow-ups. Reassignment under consideration.</li>
         <li>March 20 regulatory deadline at risk if block continues. No engineering estimate available.</li>
         <li>EU ingestion fix shares deployment dependency with Belgium. <a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1771246175204729">Ingestion QA still crashing</a>.</li>
-        <li><a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1771217056328409">CDC Metabase audit</a> shows Croatia outbound data missing from cdc_einvoice table.</li>
+        <li>CDC Metabase audit shows Croatia outbound data missing from cdc_einvoice table.</li>
       </ul>
       <div class="customer-issues">
         <strong>Customer Issues:</strong> Regulatory compliance at risk &mdash; no customer-specific escalations.
@@ -200,12 +241,12 @@
     </div>
     <div class="country-card-body">
       <ul>
-        <li><a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1770898199301949">Adidas prod fix deployed</a> and confirmed &mdash; testing resumed. Residual issue: one older invoice still showing &ldquo;Submitted&rdquo; status. DB PR effort estimate pending.</li>
-        <li><a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1771241274985599">Poland schema issue resolved</a>. V1 updated.</li>
-        <li><a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1771230522866139">Poland fetch flow unblocked</a> &mdash; receiver ID provided. Validation pending.</li>
+        <li>Adidas prod fix deployed and confirmed &mdash; testing resumed. Residual issue: one older invoice still showing &ldquo;Submitted&rdquo; status. DB PR effort estimate pending.</li>
+        <li>Poland schema issue resolved. V1 updated.</li>
+        <li>Poland fetch flow unblocked &mdash; receiver ID provided. Validation pending.</li>
         <li>Poland QA Ingestion API returning 500 errors &mdash; flagged today, no response yet.</li>
         <li><a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1771246175204729">Ingestion QA still crashing</a> &mdash; blocked 36+ hours. Questions about vault deletion and Jenkins pipelines unanswered. Blocks Poland ingestion testing.</li>
-        <li><a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1771217056328409">CDC Metabase audit</a>: Poland inbound data missing from cdc_purchaseeinvoice table.</li>
+        <li>CDC Metabase audit: Poland inbound data missing from cdc_purchaseeinvoice table.</li>
       </ul>
       <div class="customer-issues">
         <strong>Customer Issues:</strong> Adidas stabilized. 2 issues in delivery-to-verify.
@@ -251,9 +292,9 @@
     </div>
     <div class="country-card-body">
       <ul>
-        <li>C5 development complete. <a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1771217195937419">Demo Thursday</a> if no P0 found in testing.</li>
+        <li>C5 development complete. Demo Thursday if no P0 found in testing.</li>
         <li><a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1771304480012439">QA environment contaminated</a> this morning &mdash; dev version deployed breaking all UAE Peppol docs. Reverted within 42 minutes. Process issue flagged.</li>
-        <li><a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1771224459643989">UAE end-user template</a> under quality review &mdash; 5 open points submitted to compliance team.</li>
+        <li>UAE end-user template under quality review &mdash; 5 open points submitted to compliance team.</li>
         <li>Revenue remains Red &mdash; Yardi integration pending, Savvy Games GL recon blocked since Oct 2025.</li>
       </ul>
       <div class="customer-issues">
@@ -295,8 +336,8 @@
     <div class="country-card-body">
       <ul>
         <li>G2V refusing to proceed until AP tracking feature is built. Hard customer block &mdash; onboarding pushed 2 weeks. Tied to 12Cr ARR EU portal enhancement.</li>
-        <li><a href="https://cleartaxtech.slack.com/archives/C09D9HEP8JK/p1771230249559559">Dev assignment resolved</a> &mdash; engineering capacity being allocated. ETA Feb 25.</li>
-        <li><a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1770798628131439">BIS 3.0 starting</a> &mdash; adds engineering load while customer issues remain open. Prod deployment scheduled Feb 22.</li>
+        <li>Dev assignment resolved &mdash; engineering capacity being allocated. ETA Feb 25.</li>
+        <li>BIS 3.0 starting &mdash; adds engineering load while customer issues remain open. Prod deployment scheduled Feb 22.</li>
         <li>Germany sample data ingestion failing &mdash; fix needed for client meeting.</li>
       </ul>
       <div class="customer-issues">
@@ -351,9 +392,9 @@
         <li>PPF Directory (Annuaire) API access now available &mdash; credentials shared for piste.gouv.fr. Team can start directory integration.</li>
         <li>Open-text client data flow documented (15-step PAe to PPF to PAr lifecycle).</li>
         <li>AIFE Levee des Reserves exchange meeting next Tuesday &mdash; ClearTax needs representation.</li>
-        <li><a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1771250306626219">Dev env progressing</a> &mdash; licensing service route53 mapping being fixed, page configs and launchpad cards added.</li>
+        <li>Dev env progressing &mdash; licensing service route53 mapping being fixed, page configs and launchpad cards added.</li>
         <li><a href="https://cleartaxtech.slack.com/archives/C0A1JAWJB3M/p1771223790702379">7 product items still pending</a> &mdash; blocking e-reporting and B2B flows.</li>
-        <li><a href="https://cleartaxtech.slack.com/archives/C0A1JAWJB3M/p1771220672211459">Aurify kickoff today</a>. MR 8 posted. <a href="https://cleartaxtech.slack.com/archives/C0924T2LL1H/p1770788727749769">Iopole discussion also today</a>.</li>
+        <li>Aurify kickoff today. MR 8 posted. Iopole discussion also today.</li>
         <li>AIFE pilot Feb 24 &mdash; registration confirmed. Questions being compiled.</li>
         <li>Sep 1 mandate may be postponed (news expected at JFE May 5).</li>
       </ul>
@@ -362,7 +403,7 @@
         Submit AIFE connection sheets immediately. Deliver 7 blocking product items. Decide Aurify vs Iopole vs build for PA registration. Start PPF Directory API integration. Stabilize dev environment.
       </div>
       <div class="key-stakeholders">
-        <strong>Key Stakeholders:</strong> <a href="https://cleartaxtech.slack.com/archives/C0924T2LL1H/p1770788727749769">Iopole</a> (PA registration &mdash; discussions today), AIFE (pilot Feb 24, connection sheets missing), <a href="https://cleartaxtech.slack.com/archives/C0A1JAWJB3M/p1771220672211459">Aurify</a> (kickoff today, accreditation target early March, MR 8 posted), S3NS (SecNumCloud certificates received for France PDP hosting)
+        <strong>Key Stakeholders:</strong> Iopole (PA registration &mdash; discussions today), AIFE (pilot Feb 24, connection sheets missing), Aurify (kickoff today, accreditation target early March, MR 8 posted), S3NS (SecNumCloud certificates received for France PDP hosting)
       </div>
       <div class="customer-status">
         <div class="customer-status-header">
@@ -410,7 +451,7 @@
       <tr>
         <td>&#x1F1EF;&#x1F1F4; Jordan</td>
         <td><span class="pipeline-status">Discovery</span></td>
-        <td>InvoiceQ preferred over BDO. <a href="https://cleartaxtech.slack.com/archives/C0ABA7RC1QD/p1771225318943559">Regional expert meeting</a> was yesterday &mdash; outcome not posted. MAF deal volumes (7M committed) awaiting Sales.</td>
+        <td>InvoiceQ preferred over BDO. Regional expert meeting was yesterday &mdash; outcome not posted. MAF deal volumes (7M committed) awaiting Sales.</td>
       </tr>
       <tr>
         <td>&#x1F1EA;&#x1F1EC; Egypt</td>
@@ -609,14 +650,14 @@
     <li><strong>QA Environment Governance:</strong> <a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1771304480012439">Dev version deployed on UAE QA</a>, broke all Peppol docs. Reverted in 42 min. Second QA/env integrity incident this week. Process guardrail needed.</li>
     <li><strong>Ingestion QA Crashing:</strong> <a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1771246175204729">Blocked 36+ hours</a>. Vault fix deployed but QA still crashing. Two questions unanswered.</li>
     <li><strong>Poland QA Ingestion API:</strong> Returning 500 errors &mdash; flagged today, no response yet. Separate from ingestion QA crash above.</li>
-    <li><strong>Metabase/CDC Data Gaps:</strong> <a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1771217056328409">Data audit completed</a>. Croatia outbound missing from cdc_einvoice. Poland inbound missing from cdc_purchaseeinvoice. Country code columns missing from auditevents and validation_error_events.</li>
-    <li><strong>BIS 3.0:</strong> <a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1770798628131439">Prod deployment scheduled</a> Sun Feb 22. BIS-only (no PINT). Feb 23 deadline.</li>
-    <li><strong>CDC Data Sync (GEINV-874):</strong> <a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1771217056328409">CDC schema review assigned</a>. Field gaps documented. Tuesday deadline.</li>
+    <li><strong>Metabase/CDC Data Gaps:</strong> Data audit completed. Croatia outbound missing from cdc_einvoice. Poland inbound missing from cdc_purchaseeinvoice. Country code columns missing from auditevents and validation_error_events.</li>
+    <li><strong>BIS 3.0:</strong> Prod deployment scheduled Sun Feb 22. BIS-only (no PINT). Feb 23 deadline.</li>
+    <li><strong>CDC Data Sync (GEINV-874):</strong> CDC schema review assigned. Field gaps documented. Tuesday deadline.</li>
     <li><strong>Redis/IRP Rate Limiting:</strong> Critical infrastructure gap causing repeated SEV-1 incidents. PagerDuty alert still triggered. Needs architectural fix.</li>
-    <li><strong>Remarks/Tagging (PL/CR):</strong> <a href="https://cleartaxtech.slack.com/archives/C08MX0F3F17/p1771217421813519">Scope clarified</a> as book-keeping. Product problem statement due Wed Feb 18. Customer ETA commitment also due Wed.</li>
+    <li><strong>Remarks/Tagging (PL/CR):</strong> Scope clarified as book-keeping. Product problem statement due Wed Feb 18. Customer ETA commitment also due Wed.</li>
     <li><strong>EU Portal Enhancement:</strong> 12Cr ARR opportunity. G2V churn risk. ETA committed by mid-next week.</li>
     <li><strong>Contract Testers:</strong> 3 contract functional testers approval still pending since Feb 10.</li>
-    <li><strong>Compliance Standup:</strong> <a href="https://cleartaxtech.slack.com/archives/C0A9ESYUSQY/p1771217018879379">Compliance team now joining engineering standups</a>. Improved cross-functional visibility.</li>
+    <li><strong>Compliance Standup:</strong> Compliance team now joining engineering standups. Improved cross-functional visibility.</li>
     <li><strong>AOP FY&rsquo;27:</strong> International AOP check-in today 9 AM. Infra cost allocation question pending.</li>
   </ul>
 
