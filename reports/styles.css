@@ -543,6 +543,54 @@ body {
   font-style: italic;
 }
 
+/* ---------- Thread References (collapsible) ---------- */
+
+details.thread-refs {
+  list-style: none;
+}
+
+details.thread-refs summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+details.thread-refs summary::-webkit-details-marker { display: none; }
+
+details.thread-refs summary::before {
+  content: "▸ ";
+  color: var(--gray-light);
+  font-size: 0.75em;
+}
+
+details.thread-refs[open] summary::before {
+  content: "▾ ";
+}
+
+ul.thread-list {
+  margin: var(--space-xs) 0 var(--space-xs) var(--space-md);
+  padding: 0;
+  list-style: none;
+  font-size: 0.8rem;
+}
+
+ul.thread-list li {
+  padding: 2px 0;
+}
+
+ul.thread-list li::before {
+  content: "🔗 ";
+  font-size: 0.7rem;
+}
+
+ul.thread-list a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+ul.thread-list a:hover {
+  text-decoration: underline;
+}
+
 /* ---------- Metrics Tables ---------- */
 
 details.metrics-toggle {
