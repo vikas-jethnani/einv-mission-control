@@ -79,7 +79,7 @@ body {
   border-bottom: 3px solid var(--ink);
 }
 
-.report-date {
+.report-title {
   font-family: var(--font-display);
   font-size: 2rem;
   font-weight: 800;
@@ -88,33 +88,27 @@ body {
   margin-bottom: var(--space-xs);
 }
 
-.report-title {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--blue);
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+.report-date {
+  font-size: 0.85rem;
+  color: var(--gray);
   margin-bottom: var(--space-md);
 }
 
 .report-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-sm) var(--space-lg);
   font-size: 0.8rem;
   color: var(--gray);
-  font-family: var(--font-mono);
+  margin-bottom: var(--space-sm);
 }
 
-.report-meta span {
-  white-space: nowrap;
-}
-
-.report-attribution {
-  font-size: 0.8rem;
-  color: var(--gray-light);
-  margin-top: var(--space-sm);
+.report-disclaimer {
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--gray);
+  background: var(--gray-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-lg);
 }
 
 /* ---------- RAG Summary Bar ---------- */

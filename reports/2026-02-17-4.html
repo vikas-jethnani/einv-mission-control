@@ -11,8 +11,8 @@
   <!-- ==================== HEADER ==================== -->
   <header class="report-header">
     <div class="report-title">Global eInvoicing Mission Control</div>
-    <div class="report-date">17 Feb 2026</div>
-    <div class="report-meta">Sources: 17 Slack channels &middot; 5-day email digest &middot; Outstanding Issues (Google Sheet)</div>
+    <div class="report-date">17 Feb 2026 &middot; Generated at 14:00 IST</div>
+    <div class="report-meta">Sources: 17 Slack channels &middot; 5-day email digest &middot; Outstanding Issues (Google Sheet) &middot; Granola meeting notes</div>
   </header>
 
   <div class="report-disclaimer">This report may not be exhaustive. It is auto-generated from the last 5&ndash;7 days of Slack, email, and document activity. Check the generation timestamp above for freshness.</div>
@@ -46,31 +46,10 @@
   <div class="callout-section blockers">
     <h2>Critical Blockers</h2>
     <ul>
-      <li><span class="country-tag">KSA:</span> IKK Group CIO threatening vendor switch. Aramco portal rejects ClearTax-generated PDFs due to missing /EmbeddedFiles metadata key. 108M SAR invoice blocked.
-        <ul>
-          <li>Impacts ALL KSA clients uploading to Aramco. Customer gave today/tomorrow deadline.</li>
-        </ul>
-      </li>
-      <li><span class="country-tag">Croatia:</span> E-reporting development blocked Day 7+. Owner (Aquib) completely non-responsive.
-        <ul>
-          <li>No estimate, no acknowledgment. March 20 regulatory deadline at risk. Reassignment overdue.</li>
-        </ul>
-      </li>
-      <li><span class="country-tag">India:</span> Redis SEV-1 still triggered (&gt;80% memory on Async flow). IRP lacks rate limiting &mdash; no permanent fix timeline.
-        <ul>
-          <li>Two L3 support tickets stuck 40+ hours with no handoff (client 499 ERP integration, Alstom EWB archive 6 days stale).</li>
-        </ul>
-      </li>
-      <li><span class="country-tag">France:</span> AIFE says they have NOT received ClearTax connection sheets for PROD EDI and Qualification (EDI + API).
-        <ul>
-          <li>Blocking France testing pipeline. 7 product items still pending on Aayushi.</li>
-        </ul>
-      </li>
-      <li><span class="country-tag">Malaysia:</span> Shipping TIN validation issue &mdash; zero engineering response after 4 follow-ups over 3 days.
-        <ul>
-          <li>Customer (Vanity Group) blocked on production.</li>
-        </ul>
-      </li>
+      <li><span class="country-tag">India / KSA:</span> Aramco PDF rejection P0 escalation. IKK Group CIO threatening vendor switch over 108M SAR blocked invoice. Aramco introduced new validation (Jan 1) requiring /EmbeddedFiles metadata key. Impacts all KSA clients uploading PDFs to Aramco portal. Redis SEV-1 still triggered (no permanent fix).</li>
+      <li><span class="country-tag">Croatia:</span> E-reporting blocked Day 7+. Aquib Jawed non-responsive across all channels. March 20 regulatory deadline at risk. Reassignment overdue.</li>
+      <li><span class="country-tag">Germany:</span> G2V refusing to onboard until AP tracking feature is built. 9+ open issues across HID Global, SGK, K&amp;S. No engineering capacity allocated.</li>
+      <li><span class="country-tag">France:</span> AIFE says they haven&rsquo;t received ClearTax connection sheets (fiches raccordement) for PROD EDI and Qualification channels. Blocks France testing. 7 product items still pending on Aayushi.</li>
     </ul>
   </div>
 
@@ -78,11 +57,11 @@
   <div class="callout-section highlights">
     <h2>Highlights</h2>
     <ul>
-      <li><span class="country-tag">Poland:</span> Adidas prod fix deployed overnight. Testing resumed. Poland fetch flow unblocked by Shreyash.</li>
-      <li><span class="country-tag">France:</span> PPF Directory (Annuaire) API access now available &mdash; Aayushi shared credentials. Open-text client data flow documented. Aurify MR 8 posted. War room operational.</li>
-      <li><span class="country-tag">Germany:</span> Dev assignment unblocked &mdash; Vikas authorized Anand to pull in devs. ETA Feb 25 holds.</li>
-      <li><span class="country-tag">UAE:</span> C5 development complete. QA handover call being scheduled (Sajini/Ayush confirmed). Demo Thursday.</li>
-      <li><span class="country-tag">Cross-cutting:</span> Metabase CDC data audit completed &mdash; schema gaps documented for EU metrics. Compliance team now joining standups. BIS prod deployment Feb 22.</li>
+      <li><span class="country-tag">UAE:</span> Corner 5 development completed. Demo PRs ready. QA handover call being scheduled (Sajini/Ayush confirmed).</li>
+      <li><span class="country-tag">Poland:</span> Adidas prod fix deployed and testing resumed. Poland schema issue resolved by Kunal. Fetch flow unblocked by Shreyash.</li>
+      <li><span class="country-tag">France:</span> PPF Directory (Annuaire) API access now available &mdash; Aayushi shared credentials. War room operational. Govind progressing on dev env. Aurify MR 8 posted. AIFE pilot Feb 24 confirmed.</li>
+      <li><span class="country-tag">Belgium:</span> Cognizant SAP Ariba breakthrough &mdash; invoices into Ariba without SAP DRC license. Potential strategic unlock.</li>
+      <li><span class="country-tag">Cross-cutting:</span> Compliance team joined engineering standups. BIS 3.0 prod deployment scheduled Feb 22. Metabase CDC data audit completed &mdash; schema gaps documented.</li>
     </ul>
   </div>
 
@@ -160,6 +139,7 @@
       <ul>
         <li>E-reporting blocked Day 7+. Aquib has not responded to any of Nikhil&rsquo;s daily follow-ups. Reassignment to Govind or Anand is overdue.</li>
         <li>March 20 regulatory deadline at risk if block continues. No engineering estimate available.</li>
+        <li>EU ingestion fix shares deployment dependency with Belgium.</li>
         <li>CDC Metabase audit shows Croatia outbound data missing from cdc_einvoice table.</li>
       </ul>
       <div class="customer-issues">
@@ -246,9 +226,9 @@
     </div>
     <div class="country-card-body">
       <ul>
-        <li>QA environment contaminated this morning &mdash; Kartik deployed a dev version breaking all Peppol docs. Reverted within 42 minutes.</li>
-        <li>Sajini requested QA handover call once fixes deployed. Ayush confirmed. Testing resumes after QA verified clean.</li>
         <li>C5 development complete. Demo Thursday if no P0 found in testing.</li>
+        <li>QA environment contaminated &mdash; Kartik deployed dev version breaking all Peppol docs. Reverted within 42 minutes.</li>
+        <li>Sajini requested QA handover call once fixes deployed. Ayush confirmed. Testing resumes after QA verified clean.</li>
         <li>5 open compliance points on UAE template from Vinay &mdash; awaiting response.</li>
       </ul>
       <div class="customer-issues">
@@ -338,17 +318,18 @@
     </div>
     <div class="country-card-body">
       <ul>
-        <li>AIFE sent two emails (Feb 16) stating they have NOT received ClearTax connection sheets for PROD EDI and Qualification. Blocks France testing pipeline.</li>
+        <li>AIFE says they have NOT received ClearTax connection sheets for PROD EDI and Qualification. Blocks France testing pipeline.</li>
         <li>PPF Directory (Annuaire) API access now available &mdash; Aayushi shared credentials for piste.gouv.fr. Team can start directory integration.</li>
         <li>Open-text client data flow documented (15-step PAe to PPF to PAr lifecycle).</li>
         <li>Aurify kickoff today. MR 8 posted by Nikhil. Iopole discussion with Ayush also today.</li>
         <li>7 Product items ALL pending on Aayushi &mdash; blocking Ashraf and Govind.</li>
         <li>Dev env progressing &mdash; Govind adding route53 mapping, page configs, launchpad cards.</li>
         <li>AIFE pilot Feb 24. Nikhil registered.</li>
+        <li>Sep 1 mandate may be postponed (news expected at JFE May 5).</li>
       </ul>
       <div class="path-to-green">
         <strong>Path to Green</strong><br>
-        Submit AIFE connection sheets immediately. Start PPF Directory API integration. Aayushi delivers 7 blocking items. Decide Aurify vs Iopole for PA registration. Stabilize dev environment.
+        Submit AIFE connection sheets immediately. Aayushi delivers 7 blocking items. Decide Aurify vs Iopole for PA registration. Start PPF Directory API integration. Stabilize dev environment.
       </div>
       <div class="key-stakeholders">
         <strong>Key Stakeholders:</strong> AIFE (connection sheets overdue, pilot Feb 24), Iopole (PA registration &mdash; discussion today), Aurify (kickoff today, MR 8, accreditation target early March), S3NS (SecNumCloud certificates received)
@@ -441,7 +422,8 @@
       <ul>
         <li>IKK Group P0 escalation: CIO threatening vendor switch over Aramco PDF rejection. 108M SAR invoice blocked. Missing /EmbeddedFiles metadata key. Impacts ALL KSA clients uploading to Aramco portal.</li>
         <li>Redis SEV-1 still triggered (&gt;80% memory). IRP rate limiting absent &mdash; no permanent fix timeline.</li>
-        <li>Two L3 support tickets stuck: client 499 ERP integration (40+ hrs, Abhilash on leave) and Alstom EWB archive (6 days stale).</li>
+        <li>IRN grace period errors &mdash; stale since Dec 2023. NIC enforcing 30-day limit. Production customers hitting errors.</li>
+        <li>Retool audit tool broken since Feb 11 &mdash; blocks L2 support tooling for all GSTINs.</li>
         <li>Unicommerce OMS API integration meetings happened. Prachi set up expectations discussion.</li>
       </ul>
       <div class="customer-status">
@@ -535,6 +517,7 @@
         <li>IKK Group escalation P0 &mdash; CIO threatening vendor switch. 108M SAR blocked. Missing /EmbeddedFiles metadata key. Impacts ~10+ KSA customers. Manual workaround exists but not scalable.</li>
         <li>Qiddiya rounding validation blocking 6 invoices. ZATCA agreed to disable blocking; implementation pending.</li>
         <li>Lulu reconciliation mismatch &mdash; analysis in progress (40 lakh rows).</li>
+        <li>MEA QA PDF gen 500 error under investigation.</li>
       </ul>
       <div class="customer-status">
         <div class="customer-status-header">
@@ -567,15 +550,15 @@
   <p class="section-subtitle">Consolidated from email communications over the last 5 days.</p>
 
   <ul class="stakeholder-list">
-    <li><span class="stakeholder-name">IKK Group / Aramco</span> <span class="stakeholder-country">KSA</span> &mdash; P0. CIO threatening vendor switch. 108M SAR blocked. Aramco&rsquo;s new Jan 1 validation rejects ClearTax PDFs. Naveen identified /EmbeddedFiles metadata key issue. Manual workaround exists but not scalable. Deadline: today/tomorrow.</li>
-    <li><span class="stakeholder-name">AIFE</span> <span class="stakeholder-country">France</span> &mdash; Two emails (Feb 16) stating connection sheets NOT received for PROD EDI and Qualification. Blocking testing pipeline.</li>
+    <li><span class="stakeholder-name">IKK Group / Aramco</span> <span class="stakeholder-country">KSA</span> &mdash; P0. CIO threatening vendor switch. 108M SAR blocked. Aramco&rsquo;s new Jan 1 validation rejects ClearTax PDFs. Three customers confirmed (IKK, Emerson Saudi, Alkhorayef). Must fix unilaterally.</li>
+    <li><span class="stakeholder-name">AIFE</span> <span class="stakeholder-country">France</span> &mdash; Two emails stating connection sheets NOT received for PROD EDI and Qualification. Blocking testing pipeline.</li>
     <li><span class="stakeholder-name">AIFE</span> <span class="stakeholder-country">France</span> &mdash; Levee des Reserves exchange meeting next Tuesday. ClearTax needs representation.</li>
-    <li><span class="stakeholder-name">Iopole</span> <span class="stakeholder-country">France</span> &mdash; Discussion today. Claims 10-day PA registration. Accredited PA, white-label, 15 PAs.</li>
+    <li><span class="stakeholder-name">Iopole</span> <span class="stakeholder-country">France</span> &mdash; Discussion today. Claims 10-day PA registration. Accredited PA, white-label.</li>
     <li><span class="stakeholder-name">Aurify</span> <span class="stakeholder-country">France</span> &mdash; Kickoff today. MR 8 posted. Accreditation target early March. Contract signed.</li>
-    <li><span class="stakeholder-name">Unicommerce</span> <span class="stakeholder-country">India</span> &mdash; API integration meetings happened. Anshala joining. Prachi set up expectations discussion.</li>
+    <li><span class="stakeholder-name">Unicommerce</span> <span class="stakeholder-country">India</span> &mdash; API integration meetings happened. Prachi set up expectations discussion.</li>
     <li><span class="stakeholder-name">Future Processing</span> <span class="stakeholder-country">Poland</span> &mdash; Ayush re-engaging vendor partner after delay.</li>
     <li><span class="stakeholder-name">Savvy Games</span> <span class="stakeholder-country">UAE</span> &mdash; GL recon blocked since Oct 2025. Syed escalated to Hemang (Engineo CEO).</li>
-    <li><span class="stakeholder-name">Yardi</span> <span class="stakeholder-country">UAE</span> &mdash; Integration pending. No timeline. Aggressively pitching ClearTax to UAE customers.</li>
+    <li><span class="stakeholder-name">Yardi</span> <span class="stakeholder-country">UAE</span> &mdash; Integration pending. No timeline.</li>
     <li><span class="stakeholder-name">Cognizant</span> <span class="stakeholder-country">Belgium</span> &mdash; SAP Ariba breakthrough &mdash; invoices into Ariba without DRC license.</li>
     <li><span class="stakeholder-name">S3NS/SecNumCloud</span> <span class="stakeholder-country">France</span> &mdash; Qualification certificates received. Needs review for PDP hosting.</li>
   </ul>
@@ -585,9 +568,9 @@
   <p class="section-subtitle">Strategic initiatives, POCs, and platform-wide engineering updates.</p>
 
   <ul class="platform-list">
-    <li><strong>QA Environment Governance:</strong> Kartik deployed dev version on QA, broke UAE Peppol docs. Reverted in 42 min. Sajini requested QA handover call; Ayush confirmed. Process gap needs formal guardrail.</li>
+    <li><strong>QA Environment Governance:</strong> Kartik deployed dev version on QA, broke UAE Peppol docs. Reverted in 42 min. Process gap needs formal guardrail.</li>
     <li><strong>Ingestion QA Crashing:</strong> Arushit stuck 36+ hours. Poland QA Ingestion API also returning 500 (Khushboo flagged, no response). Two separate ingestion issues blocking QA.</li>
-    <li><strong>Metabase/CDC Data Gaps:</strong> Nagadri completed audit. Croatia outbound missing. Poland inbound missing. Country code columns missing from auditevents and validation_error_events. cdc_transactions has only Jan 28 data with missing fields. Multiple schema additions needed for proper EU metrics.</li>
+    <li><strong>Metabase/CDC Data Gaps:</strong> Nagadri completed audit. Croatia outbound missing. Poland inbound missing. Country code columns missing from auditevents and validation_error_events. Multiple schema additions needed for proper EU metrics.</li>
     <li><strong>BIS 3.0:</strong> Prod deployment scheduled Sun Feb 22. BIS-only (no PINT). Feb 23 deadline.</li>
     <li><strong>CDC Data Sync (GEINV-874):</strong> Ashraf assigned CDC review. Nagadri documented field gaps. Tuesday deadline from Ishaan.</li>
     <li><strong>Redis/IRP Rate Limiting:</strong> Critical infrastructure gap. PagerDuty alert still triggered. Needs architectural fix.</li>
@@ -596,7 +579,6 @@
     <li><strong>Contract Testers:</strong> 3 contract functional testers approval still pending since Feb 10.</li>
     <li><strong>Compliance Standup:</strong> Compliance team now joining engineering standups.</li>
     <li><strong>AOP FY&rsquo;27:</strong> Review meeting today 9 AM. Ishaan asked about infra cost allocation.</li>
-    <li><strong>QA Automation:</strong> Suite failure. Haribaskar fixing. 44+ hours no update.</li>
   </ul>
 
   <!-- ==================== MOVEMENT SINCE LAST REPORT ==================== -->
@@ -798,7 +780,7 @@
 
   <!-- ==================== FOOTER ==================== -->
   <footer class="report-footer">
-    eInvoice Bot &middot; Auto-generated from Slack + Email &middot; 17 Feb 2026
+    eInvoice Bot &middot; Auto-generated from Slack + Email &middot; 17 Feb 2026 &middot; 14:00 IST
   </footer>
 
 </body>
