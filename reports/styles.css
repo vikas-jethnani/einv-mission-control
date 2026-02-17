@@ -94,17 +94,11 @@ body {
   margin-bottom: var(--space-md);
 }
 
-.report-meta {
+.report-disclaimer {
   font-size: 0.8rem;
   color: var(--gray);
-  margin-bottom: var(--space-sm);
-}
-
-.report-disclaimer {
-  font-size: 0.75rem;
-  font-style: italic;
-  color: var(--gray-light);
-  margin-top: var(--space-sm);
+  margin-top: var(--space-md);
+  line-height: 1.5;
 }
 
 /* ---------- RAG Summary Bar ---------- */
