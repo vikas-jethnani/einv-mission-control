@@ -1,0 +1,56 @@
+{
+  "date": "2026-02-18",
+  "executive_summary": "10 countries tracked. 2 Red (Croatia, Germany). 7 Amber. 1 No Data (Singapore). Croatia remains blocked on ecosio deliverables. Germany has critical P0 customer issues piling up. KSA and Malaysia approaching Green trajectory.",
+  "trends": [
+    {
+      "country": "Croatia",
+      "insight": "Red for 4 consecutive reports. Blocked on ecosio sample payloads for e-reporting. March 20 regulatory deadline at risk without immediate unblock.",
+      "severity": "negative"
+    },
+    {
+      "country": "Germany",
+      "insight": "Red — P0 customer issues across HID Global, SGK, K&S. Print template mapping broken. Multiple field-level fixes needed.",
+      "severity": "negative"
+    },
+    {
+      "country": "Belgium",
+      "insight": "Amber for 4 consecutive reports. Issue count remains high at 25+ across multiple clients.",
+      "severity": "warning"
+    },
+    {
+      "country": "KSA",
+      "insight": "Amber but improving. Support tickets trending down. Aramco PDF fix deployed.",
+      "severity": "positive"
+    },
+    {
+      "country": "Malaysia",
+      "insight": "Amber but stable. No major escalations. Unified API development on track.",
+      "severity": "positive"
+    }
+  ],
+  "predictions": [
+    {
+      "country": "Croatia",
+      "prediction": "If ecosio delivers sample payloads this week, March 20 deadline is still achievable. If delayed further, deadline will be missed.",
+      "confidence": "medium"
+    },
+    {
+      "country": "KSA",
+      "prediction": "On track to reach Green next report if no new support tickets emerge.",
+      "confidence": "high"
+    },
+    {
+      "country": "Germany",
+      "prediction": "Will remain Red until P0 field fixes are deployed. Earliest improvement: next report if dedicated engineering focus maintained.",
+      "confidence": "medium"
+    }
+  ],
+  "coaching": [
+    "Two countries in Red (Croatia, Germany) — both blocked on different things. Croatia is an external dependency (ecosio), Germany is internal execution. Different unblocking strategies needed.",
+    "KSA and Malaysia are the closest to Green. Prioritizing their remaining items could give quick wins and demonstrate program momentum."
+  ],
+  "risk_watch": [
+    "Croatia March 20 deadline — 30 days remaining. Currently blocked with no path forward until ecosio delivers.",
+    "Germany P0 backlog growing. Without dedicated engineering sprint, customer escalations will increase."
+  ]
+}

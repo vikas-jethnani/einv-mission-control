@@ -1,0 +1,11 @@
+{
+  "team_name": "Your Team Name",
+  "workstream_type": "workstream",
+  "workstreams": [
+    { "name": "Workstream 1", "category": "Category A", "icon": "\ud83d\udccc" },
+    { "name": "Workstream 2", "category": "Category A", "icon": "\ud83d\udccc" },
+    { "name": "Workstream 3", "category": "Category B", "icon": "\ud83d\udccc" }
+  ],
+  "dimensions": ["Dimension 1", "Dimension 2", "Dimension 3"],
+  "rag_labels": { "red": "Red", "amber": "Amber", "green": "Green", "no-data": "No Data" }
+}

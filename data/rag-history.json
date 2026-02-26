@@ -1,0 +1,542 @@
+{
+  "reports": [
+    "2026-02-15",
+    "2026-02-16",
+    "2026-02-17",
+    "2026-02-18",
+    "2026-02-26"
+  ],
+  "generated_at": "2026-02-26T21:11:25.260880",
+  "countries": {
+    "Belgium": {
+      "history": [
+        {
+          "date": "2026-02-15",
+          "overall": "amber",
+          "compliance": "green",
+          "engineering": "amber",
+          "product": "amber",
+          "delivery": "amber"
+        },
+        {
+          "date": "2026-02-16",
+          "overall": "amber",
+          "compliance": "green",
+          "engineering": "amber",
+          "product": "amber",
+          "delivery": "amber"
+        },
+        {
+          "date": "2026-02-17",
+          "overall": "amber",
+          "compliance": "green",
+          "engineering": "amber",
+          "product": "amber",
+          "delivery": "amber"
+        },
+        {
+          "date": "2026-02-18",
+          "overall": "amber",
+          "compliance": "green",
+          "engineering": "amber",
+          "product": "amber",
+          "delivery": "amber"
+        },
+        {
+          "date": "2026-02-26",
+          "overall": "amber",
+          "compliance": "green",
+          "engineering": "amber",
+          "product": "amber",
+          "delivery": "amber"
+        }
+      ]
+    },
+    "Croatia": {
+      "history": [
+        {
+          "date": "2026-02-15",
+          "overall": "red",
+          "compliance": "red",
+          "engineering": "red",
+          "product": "amber",
+          "delivery": "red"
+        },
+        {
+          "date": "2026-02-16",
+          "overall": "red",
+          "compliance": "red",
+          "engineering": "red",
+          "product": "amber",
+          "delivery": "red"
+        },
+        {
+          "date": "2026-02-17",
+          "overall": "red",
+          "compliance": "red",
+          "engineering": "red",
+          "product": "amber",
+          "delivery": "red"
+        },
+        {
+          "date": "2026-02-18",
+          "overall": "red",
+          "compliance": "red",
+          "engineering": "red",
+          "product": "amber",
+          "delivery": "red"
+        },
+        {
+          "date": "2026-02-26",
+          "overall": "amber",
+          "compliance": "amber",
+          "engineering": "amber",
+          "product": "amber",
+          "delivery": "amber"
+        }
+      ]
+    },
+    "Egypt": {
+      "history": [
+        {
+          "date": "2026-02-15",
+          "compliance": "no-data",
+          "product": "no-data",
+          "engineering": "no-data",
+          "delivery": "no-data",
+          "overall": "no-data"
+        },
+        {
+          "date": "2026-02-16",
+          "compliance": "no-data",
+          "product": "no-data",
+          "engineering": "no-data",
+          "delivery": "no-data",
+          "overall": "no-data"
+        },
+        {
+          "date": "2026-02-17",
+          "compliance": "no-data",
+          "product": "no-data",
+          "engineering": "no-data",
+          "delivery": "no-data",
+          "overall": "no-data"
+        },
+        {
+          "date": "2026-02-18",
+          "compliance": "no-data",
+          "product": "no-data",
+          "engineering": "no-data",
+          "delivery": "no-data",
+          "overall": "no-data"
+        },
+        {
+          "date": "2026-02-26",
+          "compliance": "no-data",
+          "product": "no-data",
+          "engineering": "no-data",
+          "delivery": "no-data",
+          "overall": "no-data"
+        }
+      ]
+    },
+    "France": {
+      "history": [
+        {
+          "date": "2026-02-15",
+          "compliance": "amber",
+          "product": "amber",
+          "engineering": "amber",
+          "delivery": "amber",
+          "overall": "amber"
+        },
+        {
+          "date": "2026-02-16",
+          "compliance": "amber",
+          "product": "amber",
+          "engineering": "amber",
+          "delivery": "amber",
+          "overall": "amber"
+        },
+        {
+          "date": "2026-02-17",
+          "compliance": "amber",
+          "product": "amber",
+          "engineering": "amber",
+          "delivery": "amber",
+          "overall": "amber"
+        },
+        {
+          "date": "2026-02-18",
+          "overall": "amber",
+          "accreditation": "amber",
+          "compliance": "amber",
+          "product": "amber",
+          "engineering": "amber",
+          "delivery": "amber"
+        },
+        {
+          "date": "2026-02-26",
+          "overall": "amber",
+          "accreditation": "amber",
+          "compliance": "amber",
+          "product": "amber",
+          "engineering": "amber",
+          "delivery": "amber"
+        }
+      ]
+    },
+    "Germany": {
+      "history": [
+        {
+          "date": "2026-02-15",
+          "overall": "red",
+          "compliance": "amber",
+          "engineering": "red",
+          "product": "red",
+          "delivery": "red"
+        },
+        {
+          "date": "2026-02-16",
+          "overall": "red",
+          "compliance": "amber",
+          "engineering": "red",
+          "product": "red",
+          "delivery": "red"
+        },
+        {
+          "date": "2026-02-17",
+          "overall": "red",
+          "compliance": "amber",
+          "engineering": "red",
+          "product": "red",
+          "delivery": "red"
+        },
+        {
+          "date": "2026-02-18",
+          "overall": "red",
+          "compliance": "amber",
+          "engineering": "red",
+          "product": "red",
+          "delivery": "red"
+        },
+        {
+          "date": "2026-02-26",
+          "overall": "amber",
+          "compliance": "amber",
+          "engineering": "amber",
+          "product": "red",
+          "delivery": "amber"
+        }
+      ]
+    },
+    "India": {
+      "history": [
+        {
+          "date": "2026-02-15",
+          "overall": "red",
+          "compliance": "green",
+          "product": "amber",
+          "engineering": "red",
+          "delivery": "amber"
+        },
+        {
+          "date": "2026-02-16",
+          "overall": "red",
+          "compliance": "green",
+          "product": "amber",
+          "engineering": "red",
+          "delivery": "amber"
+        },
+        {
+          "date": "2026-02-17",
+          "overall": "red",
+          "compliance": "green",
+          "product": "amber",
+          "engineering": "red",
+          "delivery": "red"
+        },
+        {
+          "date": "2026-02-18",
+          "overall": "amber",
+          "compliance": "green",
+          "product": "amber",
+          "engineering": "amber",
+          "delivery": "amber"
+        },
+        {
+          "date": "2026-02-26",
+          "overall": "amber",
+          "compliance": "green",
+          "product": "amber",
+          "engineering": "amber",
+          "delivery": "amber"
+        }
+      ]
+    },
+    "Jordan": {
+      "history": [
+        {
+          "date": "2026-02-15",
+          "compliance": "no-data",
+          "product": "no-data",
+          "engineering": "no-data",
+          "delivery": "no-data",
+          "overall": "no-data"
+        },
+        {
+          "date": "2026-02-16",
+          "compliance": "no-data",
+          "product": "no-data",
+          "engineering": "no-data",
+          "delivery": "no-data",
+          "overall": "no-data"
+        },
+        {
+          "date": "2026-02-17",
+          "compliance": "no-data",
+          "product": "no-data",
+          "engineering": "no-data",
+          "delivery": "no-data",
+          "overall": "no-data"
+        },
+        {
+          "date": "2026-02-18",
+          "compliance": "no-data",
+          "product": "no-data",
+          "engineering": "no-data",
+          "delivery": "no-data",
+          "overall": "no-data"
+        },
+        {
+          "date": "2026-02-26",
+          "compliance": "no-data",
+          "product": "no-data",
+          "engineering": "no-data",
+          "delivery": "no-data",
+          "overall": "no-data"
+        }
+      ]
+    },
+    "KSA": {
+      "history": [
+        {
+          "date": "2026-02-15",
+          "overall": "green",
+          "compliance": "green",
+          "product": "green",
+          "engineering": "green",
+          "delivery": "green"
+        },
+        {
+          "date": "2026-02-16",
+          "overall": "amber",
+          "compliance": "green",
+          "product": "green",
+          "engineering": "amber",
+          "delivery": "amber"
+        },
+        {
+          "date": "2026-02-17",
+          "overall": "red",
+          "compliance": "green",
+          "product": "green",
+          "engineering": "red",
+          "delivery": "red"
+        },
+        {
+          "date": "2026-02-18",
+          "overall": "amber",
+          "compliance": "green",
+          "product": "green",
+          "engineering": "amber",
+          "delivery": "amber"
+        },
+        {
+          "date": "2026-02-26",
+          "overall": "green",
+          "compliance": "green",
+          "product": "green",
+          "engineering": "green",
+          "delivery": "green"
+        }
+      ]
+    },
+    "Malaysia": {
+      "history": [
+        {
+          "date": "2026-02-15",
+          "overall": "green",
+          "compliance": "green",
+          "product": "green",
+          "engineering": "green",
+          "delivery": "green"
+        },
+        {
+          "date": "2026-02-16",
+          "overall": "green",
+          "compliance": "green",
+          "product": "green",
+          "engineering": "green",
+          "delivery": "green"
+        },
+        {
+          "date": "2026-02-17",
+          "overall": "amber",
+          "compliance": "green",
+          "product": "green",
+          "engineering": "amber",
+          "delivery": "amber"
+        },
+        {
+          "date": "2026-02-18",
+          "overall": "amber",
+          "compliance": "green",
+          "product": "green",
+          "engineering": "amber",
+          "delivery": "amber"
+        },
+        {
+          "date": "2026-02-26",
+          "overall": "green",
+          "compliance": "green",
+          "product": "green",
+          "engineering": "green",
+          "delivery": "green"
+        }
+      ]
+    },
+    "Poland": {
+      "history": [
+        {
+          "date": "2026-02-15",
+          "overall": "amber",
+          "compliance": "amber",
+          "engineering": "amber",
+          "product": "amber",
+          "delivery": "amber"
+        },
+        {
+          "date": "2026-02-16",
+          "overall": "amber",
+          "compliance": "amber",
+          "engineering": "amber",
+          "product": "amber",
+          "delivery": "amber"
+        },
+        {
+          "date": "2026-02-17",
+          "overall": "amber",
+          "compliance": "amber",
+          "engineering": "amber",
+          "product": "amber",
+          "delivery": "amber"
+        },
+        {
+          "date": "2026-02-18",
+          "overall": "amber",
+          "compliance": "amber",
+          "engineering": "amber",
+          "product": "amber",
+          "delivery": "amber"
+        },
+        {
+          "date": "2026-02-26",
+          "overall": "amber",
+          "compliance": "green",
+          "engineering": "amber",
+          "product": "amber",
+          "delivery": "amber"
+        }
+      ]
+    },
+    "Singapore": {
+      "history": [
+        {
+          "date": "2026-02-15",
+          "compliance": "no-data",
+          "product": "no-data",
+          "engineering": "no-data",
+          "delivery": "no-data",
+          "overall": "no-data"
+        },
+        {
+          "date": "2026-02-16",
+          "compliance": "no-data",
+          "product": "no-data",
+          "engineering": "no-data",
+          "delivery": "no-data",
+          "overall": "no-data"
+        },
+        {
+          "date": "2026-02-17",
+          "compliance": "no-data",
+          "product": "no-data",
+          "engineering": "no-data",
+          "delivery": "no-data",
+          "overall": "no-data"
+        },
+        {
+          "date": "2026-02-18",
+          "overall": "no-data",
+          "compliance": "no-data",
+          "product": "no-data",
+          "engineering": "no-data",
+          "delivery": "no-data"
+        },
+        {
+          "date": "2026-02-26",
+          "overall": "no-data",
+          "compliance": "no-data",
+          "product": "no-data",
+          "engineering": "no-data",
+          "delivery": "no-data"
+        }
+      ]
+    },
+    "UAE": {
+      "history": [
+        {
+          "date": "2026-02-15",
+          "compliance": "amber",
+          "product": "amber",
+          "engineering": "green",
+          "delivery": "amber",
+          "overall": "amber"
+        },
+        {
+          "date": "2026-02-16",
+          "compliance": "amber",
+          "product": "amber",
+          "engineering": "green",
+          "delivery": "amber",
+          "overall": "amber"
+        },
+        {
+          "date": "2026-02-17",
+          "compliance": "amber",
+          "product": "amber",
+          "engineering": "amber",
+          "delivery": "amber",
+          "overall": "amber"
+        },
+        {
+          "date": "2026-02-18",
+          "compliance": "amber",
+          "product": "amber",
+          "engineering": "amber",
+          "delivery": "amber",
+          "overall": "amber"
+        },
+        {
+          "date": "2026-02-26",
+          "compliance": "amber",
+          "product": "amber",
+          "engineering": "amber",
+          "delivery": "amber",
+          "overall": "amber"
+        }
+      ]
+    }
+  }
+}

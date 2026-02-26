@@ -1,0 +1,14 @@
+{
+  "team_name": "Platform Engineering",
+  "workstream_type": "service",
+  "workstreams": [
+    { "name": "Auth Service", "category": "Core", "icon": "\ud83d\udd10" },
+    { "name": "API Gateway", "category": "Core", "icon": "\ud83c\udf10" },
+    { "name": "Redis Cluster", "category": "Infrastructure", "icon": "\ud83d\udcbe" },
+    { "name": "Kafka Pipeline", "category": "Infrastructure", "icon": "\ud83d\udce8" },
+    { "name": "CI/CD Pipeline", "category": "DevOps", "icon": "\u2699\ufe0f" },
+    { "name": "Monitoring Stack", "category": "Observability", "icon": "\ud83d\udcca" }
+  ],
+  "dimensions": ["Reliability", "Performance", "Tech Debt", "Adoption"],
+  "rag_labels": { "red": "Critical", "amber": "Needs Attention", "green": "Healthy", "no-data": "No Data" }
+}

@@ -1,0 +1,23 @@
+{
+  "team_name": "Global eInvoicing",
+  "workstream_type": "country",
+  "workstreams": [
+    { "name": "India", "category": "Post GA", "flag": "\ud83c\uddee\ud83c\uddf3" },
+    { "name": "Malaysia", "category": "Post GA", "flag": "\ud83c\uddf2\ud83c\uddfe" },
+    { "name": "KSA", "category": "Post GA", "flag": "\ud83c\uddf8\ud83c\udde6" },
+    { "name": "Belgium", "category": "Pre GA", "flag": "\ud83c\udde7\ud83c\uddea" },
+    { "name": "Croatia", "category": "Pre GA", "flag": "\ud83c\udded\ud83c\uddf7" },
+    { "name": "Poland", "category": "Pre GA", "flag": "\ud83c\uddf5\ud83c\uddf1" },
+    { "name": "UAE", "category": "Pre GA", "flag": "\ud83c\udde6\ud83c\uddea" },
+    { "name": "Germany", "category": "Pre GA", "flag": "\ud83c\udde9\ud83c\uddea" },
+    { "name": "France", "category": "Upcoming", "flag": "\ud83c\uddeb\ud83c\uddf7" },
+    { "name": "Singapore", "category": "Upcoming", "flag": "\ud83c\uddf8\ud83c\uddec" }
+  ],
+  "dimensions": ["Compliance", "Engineering", "Product", "Delivery"],
+  "data_sources": {
+    "slack_channels": ["france-war-room", "belgium-bugs-task-force", "germany-einvoicing", "uae-einvoicing"],
+    "jira_board": null,
+    "github_repos": null
+  },
+  "rag_labels": { "red": "Red", "amber": "Amber", "green": "Green", "no-data": "No Data" }
+}

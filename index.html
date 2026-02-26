@@ -3,12 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Global eInvoicing Program Status</title>
-  <script>
-    fetch('manifest.json')
-      .then(r => r.json())
-      .then(d => { window.location.replace('reports/' + d.latest + '.html'); });
-  </script>
+  <title>Mission Control Explorer</title>
+  <link rel="stylesheet" href="index-styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 </head>
-<body></body>
+<body>
+
+  <!-- ===== TOP BAR ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <span class="top-bar-title" id="teamName">Mission Control Explorer</span>
+      <span class="top-bar-subtitle" id="teamType">GLOBAL EINVOICING</span>
+    </div>
+    <div class="top-bar-right">
+      <div class="mode-tabs">
+        <button class="mode-tab active" data-mode="report">Report</button>
+        <button class="mode-tab" data-mode="trends">Trends</button>
+        <button class="mode-tab" data-mode="compare">Compare</button>
+        <button class="mode-tab" data-mode="insights">AI Insights</button>
+      </div>
+      <select class="config-picker" id="configPicker">
+        <option value="config.json">eInvoicing</option>
+        <option value="configs/platform.json">Platform</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <div class="explorer-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Reports</div>
+        <div class="report-list" id="reportList">
+          <!-- Filled by JS -->
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Filters</div>
+        <div class="filter-group">
+          <label class="filter-check"><input type="checkbox" checked data-rag="red"><span class="dot dot-red"></span> Red</label>
+          <label class="filter-check"><input type="checkbox" checked data-rag="amber"><span class="dot dot-amber"></span> Amber</label>
+          <label class="filter-check"><input type="checkbox" checked data-rag="green"><span class="dot dot-green"></span> Green</label>
+          <label class="filter-check"><input type="checkbox" checked data-rag="no-data"><span class="dot dot-none"></span> No Data</label>
+        </div>
+      </div>
+      <div class="sidebar-section compare-controls" id="compareControls" style="display:none;">
+        <div class="sidebar-heading">Compare</div>
+        <div class="compare-select">
+          <label class="compare-label">Report A</label>
+          <select id="compareA" class="compare-picker"></select>
+        </div>
+        <div class="compare-select">
+          <label class="compare-label">Report B</label>
+          <select id="compareB" class="compare-picker"></select>
+        </div>
+        <button class="compare-btn" id="compareBtn">Compare</button>
+      </div>
+      <div class="sidebar-footer">
+        <div class="keyboard-hint">&#8593;&#8595; Navigate &middot; Enter Select</div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="content-area" id="contentArea">
+
+      <!-- Report View -->
+      <div class="view-panel active" id="viewReport">
+        <div class="report-container" id="reportContainer">
+          <div class="loading">Loading report...</div>
+        </div>
+      </div>
+
+      <!-- Trends View -->
+      <div class="view-panel" id="viewTrends">
+        <div class="trends-header">
+          <h2>RAG Trends Over Time</h2>
+          <p class="trends-subtitle">Tracking health across all reports</p>
+        </div>
+        <div class="trends-grid">
+          <div class="trend-card trend-card-wide">
+            <h3>RAG Heatmap</h3>
+            <div class="heatmap-container" id="heatmapContainer"></div>
+          </div>
+          <div class="trend-card trend-card-wide">
+            <h3>Overall RAG Timeline</h3>
+            <canvas id="ragTimeline" height="300"></canvas>
+          </div>
+          <div class="trend-card trend-card-wide">
+            <h3>Country Sparklines</h3>
+            <div class="sparklines-grid" id="sparklinesGrid"></div>
+          </div>
+          <div class="trend-card trend-card-wide">
+            <h3>Stats & Patterns</h3>
+            <div class="stats-container" id="statsContainer"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compare View -->
+      <div class="view-panel" id="viewCompare">
+        <div class="compare-header" id="compareHeader">
+          <div class="compare-summary" id="compareSummary">Select two reports to compare</div>
+        </div>
+        <div class="compare-grid" id="compareGrid">
+          <div class="compare-pane" id="comparePaneA">
+            <div class="compare-pane-header" id="comparePaneHeaderA">Report A</div>
+            <div class="compare-pane-body" id="comparePaneBodyA"></div>
+          </div>
+          <div class="compare-pane" id="comparePaneB">
+            <div class="compare-pane-header" id="comparePaneHeaderB">Report B</div>
+            <div class="compare-pane-body" id="comparePaneBodyB"></div>
+          </div>
+        </div>
+        <div class="compare-diff" id="compareDiff"></div>
+      </div>
+
+      <!-- AI Insights View -->
+      <div class="view-panel" id="viewInsights">
+        <div class="insights-container" id="insightsContainer">
+          <div class="loading">Loading AI insights...</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="explorer.js"></script>
+  <script src="trends.js"></script>
+  <script src="insights.js"></script>
+</body>
 </html>

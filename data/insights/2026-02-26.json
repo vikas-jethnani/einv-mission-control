@@ -1,0 +1,90 @@
+{
+  "date": "2026-02-26",
+  "executive_summary": "7 of 10 countries remain Amber. Two improved to Green (KSA, Malaysia). No Red countries — first time in 3 reports. Croatia and Germany both improved from Red to Amber. Overall trajectory is positive, but Amber concentration is high.",
+  "trends": [
+    {
+      "country": "Belgium",
+      "insight": "Amber for 5 consecutive reports. 30+ issues persistent across 15+ clients. At current resolution rate (~3/week), the backlog will take 10+ weeks to clear. No structural improvement visible — same issues recur each report.",
+      "severity": "warning"
+    },
+    {
+      "country": "Germany",
+      "insight": "Improved from Red to Amber. P0 items nearly resolved with PRs in review. Abhilash took over delivery coordination. If Feb 27 deadline is met, on track for sustained Amber with Green possible by mid-March.",
+      "severity": "positive"
+    },
+    {
+      "country": "Croatia",
+      "insight": "Improved from Red to Amber. E-reporting unblocked after ecosio delivered sample payloads. March 20 regulatory deadline now has a viable path. Single-threaded execution is the key risk.",
+      "severity": "positive"
+    },
+    {
+      "country": "KSA",
+      "insight": "Reached Green — no open support tickets, no active blockers. Aramco PDF fix holding steady. Template items in routine verification only.",
+      "severity": "positive"
+    },
+    {
+      "country": "Malaysia",
+      "insight": "Reached Green — zero support tickets. Recent confusion issue (sandbox vs prod) was user error, not systemic. Unified API live but untested by customers.",
+      "severity": "positive"
+    },
+    {
+      "country": "France",
+      "insight": "Stable Amber for 5 reports. Mixed signals: PA-PA test plan locked for March 5-6 (positive), but Annuaire API broken for 9+ days with no AIFE response (negative). EDI certificate progressing slowly.",
+      "severity": "warning"
+    },
+    {
+      "country": "UAE",
+      "insight": "Amber with mixed signals. C4 implementation Day 3 of silence (worsened), but C5 testing believed complete (positive). Government engagement active but unpredictable.",
+      "severity": "warning"
+    },
+    {
+      "country": "India",
+      "insight": "Stable Amber. Ewaybill settings save failure under investigation. IRN grace period enforcement continues. Redis SEV-1 status unclear. No major escalations but multiple open items.",
+      "severity": "warning"
+    }
+  ],
+  "predictions": [
+    {
+      "country": "France",
+      "prediction": "If PA-PA testing succeeds March 5-6 AND Annuaire API is restored AND EDI cert is secured, France could reach Green by end of March. If any of these fail, Amber persists through Q1.",
+      "confidence": "medium"
+    },
+    {
+      "country": "Croatia",
+      "prediction": "March 20 deadline achievable if engineering testing velocity stays at current pace. Risk: single-threaded execution means any blocker causes immediate schedule slip.",
+      "confidence": "medium"
+    },
+    {
+      "country": "Germany",
+      "prediction": "Feb 27 P0 deadline is tomorrow with PRs still in review. If met, Germany stabilizes at Amber with path to Green by mid-March. If missed, could regress to Red.",
+      "confidence": "high"
+    },
+    {
+      "country": "Belgium",
+      "prediction": "Without a dedicated sprint or staffing change, Belgium will not reach Green this quarter. The 30+ issue backlog at ~3/week resolution rate means 10+ weeks minimum.",
+      "confidence": "high"
+    },
+    {
+      "country": "KSA",
+      "prediction": "Should maintain Green in next report. No active risks identified.",
+      "confidence": "high"
+    },
+    {
+      "country": "Malaysia",
+      "prediction": "Should maintain Green. Watch for: customer adoption of Unified API could surface new issues.",
+      "confidence": "high"
+    }
+  ],
+  "coaching": [
+    "Belgium has been Amber for 5 reports. Consider: (1) dedicated sprint to burn down the 30+ issue backlog, (2) accept Amber and focus resources on upcoming launches (France, Croatia), or (3) assign a senior engineer to triage and prioritize the top 10 issues for rapid resolution.",
+    "Two countries went Green this week (KSA, Malaysia). Pattern: countries reach Green when support tickets hit zero AND no active blockers for 2+ weeks. Use this as the operational definition of Green for all countries.",
+    "Germany and Croatia both improved from Red to Amber — both driven by unblocking specific bottlenecks (Abhilash takeover for Germany, ecosio delivery for Croatia). Lesson: when a country is stuck in Red, the fix is usually unblocking a specific dependency, not general effort.",
+    "No Red countries for the first time in 3 reports. This is a good signal but 7 Amber countries creates 'Amber fatigue' risk — when everything is Amber, nothing gets prioritized. Pick 2-3 countries to focus on pushing to Green."
+  ],
+  "risk_watch": [
+    "UAE C4 silence (Day 3) — if no update by Feb 28, escalate. Historical pattern: silence >3 days correlates with missed ETAs.",
+    "Germany Feb 27 deadline is tomorrow with PRs still in review. Tight window for review + merge + deploy. Abhilash arriving late (medical) reduces oversight window.",
+    "France Annuaire API broken for 9+ days — no AIFE response. This is a hard external dependency with no workaround. If not restored before March 5, PA-PA testing timeline at risk.",
+    "Belgium 30+ issues across 15+ clients — no reduction trend visible. Without intervention, this becomes the longest-running Amber in the program."
+  ]
+}
