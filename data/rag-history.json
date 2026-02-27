@@ -1,31 +1,14 @@
 {
   "reports": [
-    "2026-02-15",
-    "2026-02-16",
     "2026-02-17",
     "2026-02-18",
-    "2026-02-26"
+    "2026-02-26",
+    "2026-02-27"
   ],
-  "generated_at": "2026-02-26T21:11:25.260880",
+  "generated_at": "2026-02-27T04:25:00.000000",
   "countries": {
     "Belgium": {
       "history": [
-        {
-          "date": "2026-02-15",
-          "overall": "amber",
-          "compliance": "green",
-          "engineering": "amber",
-          "product": "amber",
-          "delivery": "amber"
-        },
-        {
-          "date": "2026-02-16",
-          "overall": "amber",
-          "compliance": "green",
-          "engineering": "amber",
-          "product": "amber",
-          "delivery": "amber"
-        },
         {
           "date": "2026-02-17",
           "overall": "amber",
@@ -40,6 +23,53 @@
           "compliance": "green",
           "engineering": "amber",
           "product": "amber",
+          "customers": [
+            {
+              "name": "Delvaux",
+              "status": "red",
+              "issues": "10 active issues: PDF naming, remarks, sync button, auto-emails (buyer + purchase), tax fields, export template, import timestamps, exchange date filter, failed invoices report, special character API"
+            },
+            {
+              "name": "Shaw Inc",
+              "status": "red",
+              "issues": "8 active issues: PDF naming, remarks, auto-emails (buyer + purchase), asterisk field, exchange date filter, failed invoices report, document status not updating on failure"
+            },
+            {
+              "name": "Ascott (M-flie)",
+              "status": "red",
+              "issues": "8 active issues: PDF naming, tax fields, purchase API date, document number API, exchange date filter, line level ordering, advance date field, sales & purchase reconciliation"
+            },
+            {
+              "name": "Havas Media",
+              "status": "red",
+              "issues": "7 active issues: PDF naming, remarks, sync button, auto-emails (buyer + purchase), self billing, exchange date filter"
+            },
+            {
+              "name": "CPP Corp / CPPB",
+              "status": "red",
+              "issues": "4 active issues: remarks, sync button, tax fields. L3: PO reference + due date missing, BIS acknowledgment stuck"
+            },
+            {
+              "name": "G2V",
+              "status": "amber",
+              "issues": "Self billing, sales & purchase reconciliation. L3: self-bill invoices under Purchase instead of Sales"
+            },
+            {
+              "name": "SGK",
+              "status": "amber",
+              "issues": "Expand fields on purchase invoices, sales & purchase reconciliation"
+            },
+            {
+              "name": "UKG",
+              "status": "amber",
+              "issues": "Payment card field displayed as dropdown instead of free-text"
+            },
+            {
+              "name": "Fried Frank",
+              "status": "amber",
+              "issues": "MIS dashboard data incorrect for sales & purchase"
+            }
+          ],
           "delivery": "amber"
         },
         {
@@ -48,6 +78,72 @@
           "compliance": "green",
           "engineering": "amber",
           "product": "amber",
+          "customers": [
+            {
+              "name": "Delvaux",
+              "status": "red",
+              "issues": "10+ issues: PDF naming, remarks, sync button, auto-emails, export template, import timestamps, failed invoices report. Tax fields in verification."
+            },
+            {
+              "name": "Shaw Inc",
+              "status": "red",
+              "issues": "8+ issues: PDF naming, remarks, auto-emails, failed invoices report, doc status not updating on failure. Asterisk mark in verification."
+            },
+            {
+              "name": "Ascott (M-flie)",
+              "status": "red",
+              "issues": "8+ issues: purchase API date polling, document number API, line level ordering, advance date field. Tax fields in verification. L3: received date discrepancy."
+            },
+            {
+              "name": "Havas Media",
+              "status": "red",
+              "issues": "7+ issues: PDF naming, remarks, sync button, auto-emails. Self billing in verification."
+            },
+            {
+              "name": "CPP Corp / CPPB",
+              "status": "red",
+              "issues": "4+ issues: remarks, sync button. Tax fields in verification."
+            },
+            {
+              "name": "G2V",
+              "status": "amber",
+              "issues": "Self billing in verification. L3: sender PID not registered. Sales & purchase reconciliation requested."
+            },
+            {
+              "name": "SGK",
+              "status": "amber",
+              "issues": "Expand fields on purchase invoices. Sales & purchase reconciliation requested."
+            },
+            {
+              "name": "UKG",
+              "status": "amber",
+              "issues": "Payment card field displayed as dropdown instead of free-text."
+            },
+            {
+              "name": "Fried Frank",
+              "status": "amber",
+              "issues": "MIS dashboard data incorrect \u2014 ETA 1st week of March."
+            }
+          ],
+          "delivery": "amber"
+        },
+        {
+          "date": "2026-02-27",
+          "overall": "amber",
+          "compliance": "green",
+          "engineering": "amber",
+          "product": "amber",
+          "customers": [
+            { "name": "Delvaux", "status": "red", "issues": "10+ issues: PDF naming, remarks, sync button, auto-emails, export template, import timestamps, failed invoices report. Tax fields in verification." },
+            { "name": "Shaw Inc", "status": "red", "issues": "8+ issues: PDF naming, remarks, auto-emails, failed invoices report, doc status not updating. Asterisk mark in verification." },
+            { "name": "Ascott (M-flie)", "status": "red", "issues": "8+ issues: purchase API date, document number API, line level ordering, advance date field. Tax fields in verification. New: lite report 9-issue cluster." },
+            { "name": "Havas Media", "status": "red", "issues": "7+ issues: PDF naming, remarks, sync button, auto-emails. Self billing in verification." },
+            { "name": "CPP Corp / CPPB", "status": "red", "issues": "4+ issues: remarks, sync button. Tax fields in verification. UBL rejection due to DueDate ordering." },
+            { "name": "G2V", "status": "amber", "issues": "Self billing in verification. Sender PID not registered. Sales & purchase reconciliation requested." },
+            { "name": "SGK", "status": "amber", "issues": "Expand fields on purchase invoices. Sales & purchase reconciliation requested." },
+            { "name": "UKG", "status": "amber", "issues": "Payment card field displayed as dropdown instead of free-text." },
+            { "name": "Fried Frank", "status": "amber", "issues": "MIS dashboard data incorrect \u2014 ETA 1st week of March." }
+          ],
           "delivery": "amber"
         }
       ]
@@ -55,22 +151,6 @@
     "Croatia": {
       "history": [
         {
-          "date": "2026-02-15",
-          "overall": "red",
-          "compliance": "red",
-          "engineering": "red",
-          "product": "amber",
-          "delivery": "red"
-        },
-        {
-          "date": "2026-02-16",
-          "overall": "red",
-          "compliance": "red",
-          "engineering": "red",
-          "product": "amber",
-          "delivery": "red"
-        },
-        {
           "date": "2026-02-17",
           "overall": "red",
           "compliance": "red",
@@ -93,71 +173,19 @@
           "engineering": "amber",
           "product": "amber",
           "delivery": "amber"
-        }
-      ]
-    },
-    "Egypt": {
-      "history": [
-        {
-          "date": "2026-02-15",
-          "compliance": "no-data",
-          "product": "no-data",
-          "engineering": "no-data",
-          "delivery": "no-data",
-          "overall": "no-data"
         },
         {
-          "date": "2026-02-16",
-          "compliance": "no-data",
-          "product": "no-data",
-          "engineering": "no-data",
-          "delivery": "no-data",
-          "overall": "no-data"
-        },
-        {
-          "date": "2026-02-17",
-          "compliance": "no-data",
-          "product": "no-data",
-          "engineering": "no-data",
-          "delivery": "no-data",
-          "overall": "no-data"
-        },
-        {
-          "date": "2026-02-18",
-          "compliance": "no-data",
-          "product": "no-data",
-          "engineering": "no-data",
-          "delivery": "no-data",
-          "overall": "no-data"
-        },
-        {
-          "date": "2026-02-26",
-          "compliance": "no-data",
-          "product": "no-data",
-          "engineering": "no-data",
-          "delivery": "no-data",
-          "overall": "no-data"
+          "date": "2026-02-27",
+          "overall": "amber",
+          "compliance": "amber",
+          "engineering": "amber",
+          "product": "amber",
+          "delivery": "amber"
         }
       ]
     },
     "France": {
       "history": [
-        {
-          "date": "2026-02-15",
-          "compliance": "amber",
-          "product": "amber",
-          "engineering": "amber",
-          "delivery": "amber",
-          "overall": "amber"
-        },
-        {
-          "date": "2026-02-16",
-          "compliance": "amber",
-          "product": "amber",
-          "engineering": "amber",
-          "delivery": "amber",
-          "overall": "amber"
-        },
         {
           "date": "2026-02-17",
           "compliance": "amber",
@@ -177,6 +205,15 @@
         },
         {
           "date": "2026-02-26",
+          "overall": "amber",
+          "accreditation": "amber",
+          "compliance": "amber",
+          "product": "amber",
+          "engineering": "amber",
+          "delivery": "amber"
+        },
+        {
+          "date": "2026-02-27",
           "overall": "amber",
           "accreditation": "amber",
           "compliance": "amber",
@@ -189,22 +226,6 @@
     "Germany": {
       "history": [
         {
-          "date": "2026-02-15",
-          "overall": "red",
-          "compliance": "amber",
-          "engineering": "red",
-          "product": "red",
-          "delivery": "red"
-        },
-        {
-          "date": "2026-02-16",
-          "overall": "red",
-          "compliance": "amber",
-          "engineering": "red",
-          "product": "red",
-          "delivery": "red"
-        },
-        {
           "date": "2026-02-17",
           "overall": "red",
           "compliance": "amber",
@@ -218,6 +239,23 @@
           "compliance": "amber",
           "engineering": "red",
           "product": "red",
+          "customers": [
+            {
+              "name": "HID Global",
+              "status": "red",
+              "issues": "9 open issues: ingestion template, error messages, PDF naming/data, XML/report downloads, UI issues, line item identifier, sandbox XML, unnecessary UI fields"
+            },
+            {
+              "name": "SGK",
+              "status": "red",
+              "issues": "6 open issues: ingestion template, error messages, PDF naming/data, XML downloads, UI issues"
+            },
+            {
+              "name": "K&S",
+              "status": "red",
+              "issues": "6 open issues: ingestion template, error messages, PDF naming/data, XML downloads, UI issues"
+            }
+          ],
           "delivery": "red"
         },
         {
@@ -226,6 +264,36 @@
           "compliance": "amber",
           "engineering": "amber",
           "product": "red",
+          "customers": [
+            {
+              "name": "HID Global",
+              "status": "red",
+              "issues": "5+ open issues: XML/Reports sandbox, FTA Agreement fields, Line Item Identifier, Payment Due Date/PO Ref/VAT, Payment fields in XML"
+            },
+            {
+              "name": "SGK",
+              "status": "red",
+              "issues": "6+ open issues: ingestion template, unable to submit data, PDF naming, PDF incorrect data, download XML/Reports, UI issues"
+            },
+            {
+              "name": "K&S",
+              "status": "red",
+              "issues": "6+ open issues: ingestion template, unable to submit data, PDF naming, PDF incorrect data, download XML/Reports, UI issues"
+            }
+          ],
+          "delivery": "amber"
+        },
+        {
+          "date": "2026-02-27",
+          "overall": "amber",
+          "compliance": "amber",
+          "engineering": "amber",
+          "product": "red",
+          "customers": [
+            { "name": "HID Global", "status": "red", "issues": "5+ open issues: XML/Reports sandbox, Line Item Identifier, Payment Due Date/PO Ref/VAT, Payment fields in XML." },
+            { "name": "SGK", "status": "red", "issues": "6+ open issues: ingestion template, unable to submit data, PDF naming, PDF incorrect data, XML/Reports download, UI issues." },
+            { "name": "K&S", "status": "red", "issues": "6+ open issues: ingestion template, unable to submit data, PDF naming, PDF incorrect data, XML/Reports download, UI issues." }
+          ],
           "delivery": "amber"
         }
       ]
@@ -233,22 +301,6 @@
     "India": {
       "history": [
         {
-          "date": "2026-02-15",
-          "overall": "red",
-          "compliance": "green",
-          "product": "amber",
-          "engineering": "red",
-          "delivery": "amber"
-        },
-        {
-          "date": "2026-02-16",
-          "overall": "red",
-          "compliance": "green",
-          "product": "amber",
-          "engineering": "red",
-          "delivery": "amber"
-        },
-        {
           "date": "2026-02-17",
           "overall": "red",
           "compliance": "green",
@@ -259,6 +311,28 @@
         {
           "date": "2026-02-18",
           "overall": "amber",
+          "customers": [
+            {
+              "name": "IRN Cancellation (NIC)",
+              "status": "red",
+              "issues": "~20 cases in 9 days. Grace period enforcement affecting >10 Cr suppliers."
+            },
+            {
+              "name": "Aramco PDF (IKK Group)",
+              "status": "amber",
+              "issues": "Fix deployed and confirmed. EINVG-1972 e-inv change ticket still pending. Monitoring."
+            },
+            {
+              "name": "Retool Audit Tool",
+              "status": "amber",
+              "issues": "Broken since Feb 11 \u2014 blocks L2 support tooling."
+            },
+            {
+              "name": "Alstom (EWB Archive)",
+              "status": "amber",
+              "issues": "Download failing. 7 days stale \u2014 investigation paused pending sample data."
+            }
+          ],
           "compliance": "green",
           "product": "amber",
           "engineering": "amber",
@@ -267,6 +341,24 @@
         {
           "date": "2026-02-26",
           "overall": "amber",
+          "customers": [
+            {
+              "name": "Ewaybill settings",
+              "status": "amber",
+              "issues": "Save failure in production \u2014 popup shows \u201cSaved\u201d but settings remain disabled. Under investigation."
+            }
+          ],
+          "compliance": "green",
+          "product": "amber",
+          "engineering": "amber",
+          "delivery": "amber"
+        },
+        {
+          "date": "2026-02-27",
+          "overall": "amber",
+          "customers": [
+            { "name": "Polyplex (Ewaybill)", "status": "amber", "issues": "Settings save failure root-caused to non-admin account. Workaround provided, awaiting user confirmation." }
+          ],
           "compliance": "green",
           "product": "amber",
           "engineering": "amber",
@@ -274,54 +366,38 @@
         }
       ]
     },
-    "Jordan": {
-      "history": [
-        {
-          "date": "2026-02-15",
-          "compliance": "no-data",
-          "product": "no-data",
-          "engineering": "no-data",
-          "delivery": "no-data",
-          "overall": "no-data"
-        },
-        {
-          "date": "2026-02-16",
-          "compliance": "no-data",
-          "product": "no-data",
-          "engineering": "no-data",
-          "delivery": "no-data",
-          "overall": "no-data"
-        },
-        {
-          "date": "2026-02-17",
-          "compliance": "no-data",
-          "product": "no-data",
-          "engineering": "no-data",
-          "delivery": "no-data",
-          "overall": "no-data"
-        },
-        {
-          "date": "2026-02-18",
-          "compliance": "no-data",
-          "product": "no-data",
-          "engineering": "no-data",
-          "delivery": "no-data",
-          "overall": "no-data"
-        },
-        {
-          "date": "2026-02-26",
-          "compliance": "no-data",
-          "product": "no-data",
-          "engineering": "no-data",
-          "delivery": "no-data",
-          "overall": "no-data"
-        }
-      ]
-    },
     "KSA": {
       "history": [
         {
-          "date": "2026-02-15",
+          "date": "2026-02-17",
+          "overall": "red",
+          "compliance": "green",
+          "product": "green",
+          "engineering": "red",
+          "delivery": "red"
+        },
+        {
+          "date": "2026-02-18",
+          "overall": "amber",
+          "customers": [
+            {
+              "name": "Qiddiya",
+              "status": "red",
+              "issues": "6 invoices blocked on rounding validation. ZATCA agreed to disable blocking \u2014 implementation pending."
+            },
+            {
+              "name": "IKK Group / Aramco PDF",
+              "status": "amber",
+              "issues": "Fix deployed and confirmed. 108M SAR unblocked. Monitoring for residual issues."
+            }
+          ],
+          "compliance": "green",
+          "product": "green",
+          "engineering": "amber",
+          "delivery": "amber"
+        },
+        {
+          "date": "2026-02-26",
           "overall": "green",
           "compliance": "green",
           "product": "green",
@@ -329,32 +405,11 @@
           "delivery": "green"
         },
         {
-          "date": "2026-02-16",
-          "overall": "amber",
-          "compliance": "green",
-          "product": "green",
-          "engineering": "amber",
-          "delivery": "amber"
-        },
-        {
-          "date": "2026-02-17",
-          "overall": "red",
-          "compliance": "green",
-          "product": "green",
-          "engineering": "red",
-          "delivery": "red"
-        },
-        {
-          "date": "2026-02-18",
-          "overall": "amber",
-          "compliance": "green",
-          "product": "green",
-          "engineering": "amber",
-          "delivery": "amber"
-        },
-        {
-          "date": "2026-02-26",
+          "date": "2026-02-27",
           "overall": "green",
+          "customers": [
+            { "name": "Landmark Group", "status": "amber", "issues": "Unable to download lite report for failed offline invoices. User-specific issue, screen recording requested." }
+          ],
           "compliance": "green",
           "product": "green",
           "engineering": "green",
@@ -365,22 +420,6 @@
     "Malaysia": {
       "history": [
         {
-          "date": "2026-02-15",
-          "overall": "green",
-          "compliance": "green",
-          "product": "green",
-          "engineering": "green",
-          "delivery": "green"
-        },
-        {
-          "date": "2026-02-16",
-          "overall": "green",
-          "compliance": "green",
-          "product": "green",
-          "engineering": "green",
-          "delivery": "green"
-        },
-        {
           "date": "2026-02-17",
           "overall": "amber",
           "compliance": "green",
@@ -391,6 +430,28 @@
         {
           "date": "2026-02-18",
           "overall": "amber",
+          "customers": [
+            {
+              "name": "Vanity Group",
+              "status": "amber",
+              "issues": "Shipping TIN rejection root-caused \u2014 LHDN validation change. Investigation in progress. Downgraded from Red."
+            },
+            {
+              "name": "Media Prima",
+              "status": "amber",
+              "issues": "Print showing single line item. Feature not implemented. Effort estimate being requested."
+            },
+            {
+              "name": "Peikko",
+              "status": "amber",
+              "issues": "Document totals don\u2019t match line items \u2014 LHDN accepted anyway. Validation gap."
+            },
+            {
+              "name": "Monash University",
+              "status": "amber",
+              "issues": "Auto email triggered despite B2B disabled in sandbox. Awaiting engineering pickup."
+            }
+          ],
           "compliance": "green",
           "product": "green",
           "engineering": "amber",
@@ -398,6 +459,14 @@
         },
         {
           "date": "2026-02-26",
+          "overall": "green",
+          "compliance": "green",
+          "product": "green",
+          "engineering": "green",
+          "delivery": "green"
+        },
+        {
+          "date": "2026-02-27",
           "overall": "green",
           "compliance": "green",
           "product": "green",
@@ -409,22 +478,6 @@
     "Poland": {
       "history": [
         {
-          "date": "2026-02-15",
-          "overall": "amber",
-          "compliance": "amber",
-          "engineering": "amber",
-          "product": "amber",
-          "delivery": "amber"
-        },
-        {
-          "date": "2026-02-16",
-          "overall": "amber",
-          "compliance": "amber",
-          "engineering": "amber",
-          "product": "amber",
-          "delivery": "amber"
-        },
-        {
           "date": "2026-02-17",
           "overall": "amber",
           "compliance": "amber",
@@ -438,6 +491,13 @@
           "compliance": "amber",
           "engineering": "amber",
           "product": "amber",
+          "customers": [
+            {
+              "name": "Adidas",
+              "status": "amber",
+              "issues": "Main fix deployed. Testing resumed with fresh invoice. Residual old invoice stuck at \u201cSubmitted\u201d \u2014 DB PR decision pending."
+            }
+          ],
           "delivery": "amber"
         },
         {
@@ -446,28 +506,30 @@
           "compliance": "green",
           "engineering": "amber",
           "product": "amber",
+          "customers": [
+            {
+              "name": "Adidas",
+              "status": "red",
+              "issues": "Duplicate invoice errors in production (error 440), invalid data in two fields, audit trail discrepancy. 2 API items in delivery verification."
+            }
+          ],
+          "delivery": "amber"
+        },
+        {
+          "date": "2026-02-27",
+          "overall": "amber",
+          "compliance": "green",
+          "engineering": "amber",
+          "product": "red",
+          "customers": [
+            { "name": "Adidas", "status": "red", "issues": "Invalid buyer VATs passing production validation. Duplicate invoice errors (error 440). Invalid data in 2 fields. Audit trail discrepancy. Buyer tax filter broken." }
+          ],
           "delivery": "amber"
         }
       ]
     },
     "Singapore": {
       "history": [
-        {
-          "date": "2026-02-15",
-          "compliance": "no-data",
-          "product": "no-data",
-          "engineering": "no-data",
-          "delivery": "no-data",
-          "overall": "no-data"
-        },
-        {
-          "date": "2026-02-16",
-          "compliance": "no-data",
-          "product": "no-data",
-          "engineering": "no-data",
-          "delivery": "no-data",
-          "overall": "no-data"
-        },
         {
           "date": "2026-02-17",
           "compliance": "no-data",
@@ -486,6 +548,14 @@
         },
         {
           "date": "2026-02-26",
+          "overall": "no-data",
+          "compliance": "no-data",
+          "product": "no-data",
+          "engineering": "no-data",
+          "delivery": "no-data"
+        },
+        {
+          "date": "2026-02-27",
           "overall": "no-data",
           "compliance": "no-data",
           "product": "no-data",
@@ -497,22 +567,6 @@
     "UAE": {
       "history": [
         {
-          "date": "2026-02-15",
-          "compliance": "amber",
-          "product": "amber",
-          "engineering": "green",
-          "delivery": "amber",
-          "overall": "amber"
-        },
-        {
-          "date": "2026-02-16",
-          "compliance": "amber",
-          "product": "amber",
-          "engineering": "green",
-          "delivery": "amber",
-          "overall": "amber"
-        },
-        {
           "date": "2026-02-17",
           "compliance": "amber",
           "product": "amber",
@@ -530,6 +584,14 @@
         },
         {
           "date": "2026-02-26",
+          "compliance": "amber",
+          "product": "amber",
+          "engineering": "amber",
+          "delivery": "amber",
+          "overall": "amber"
+        },
+        {
+          "date": "2026-02-27",
           "compliance": "amber",
           "product": "amber",
           "engineering": "amber",

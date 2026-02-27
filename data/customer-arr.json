@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "source": "salesforce_crm_v2.account via Athena MCP",
+    "field": "arr_total_amount__c (fallback: sum_of_arr_assets__c)",
+    "fx_rates": { "EUR_USD": 1.08, "INR_USD": 0.012, "SAR_USD": 0.267, "MYR_USD": 0.22 },
+    "last_updated": "2026-02-27",
+    "notes": "USD thousands. 0 = not found in Salesforce. Query: SELECT DISTINCT name, arr_total_amount__c, sum_of_arr_assets__c, currencyisocode FROM salesforce_crm_v2.account WHERE LOWER(name) LIKE '%<search>%' AND year='2026' AND month='02'"
+  },
+  "customers": {
+    "Delvaux":              { "usd_k": 17, "raw": 15500,    "currency": "EUR", "sf_name": "DELVAUX" },
+    "Shaw Inc":             { "usd_k": 0,  "raw": null,     "currency": null,  "sf_name": null, "note": "Not in Salesforce" },
+    "Ascott (M-flie)":     { "usd_k": 41, "raw": 37560,    "currency": "EUR", "sf_name": "The Ascott" },
+    "Havas Media":          { "usd_k": 12, "raw": 11000,    "currency": "EUR", "sf_name": "Havas Media" },
+    "CPP Corp / CPPB":     { "usd_k": 13, "raw": 12200,    "currency": "EUR", "sf_name": "CPP Corp" },
+    "G2V":                  { "usd_k": 17, "raw": 15650,    "currency": "EUR", "sf_name": "G2V", "field": "sum_of_arr_assets__c" },
+    "SGK":                  { "usd_k": 17, "raw": 76000,    "currency": "MYR", "sf_name": "Propelis (Once called SGK)" },
+    "UKG":                  { "usd_k": 13, "raw": 1100000,  "currency": "INR", "sf_name": "UKG" },
+    "HID Global":           { "usd_k": 46, "raw": 3800000,  "currency": "INR", "sf_name": "HID Global" },
+    "Fried Frank":          { "usd_k": 7,  "raw": 6500,     "currency": "EUR", "sf_name": "Fried frank" },
+    "K&S":                  { "usd_k": 0,  "raw": null,     "currency": null,  "sf_name": null, "note": "Not in Salesforce" },
+    "Adidas":               { "usd_k": 17, "raw": 16000,    "currency": "EUR", "sf_name": "Adidas Belgium" },
+    "Savvy Games":          { "usd_k": 50, "raw": 187500,   "currency": "SAR", "sf_name": "Savvy Games Group" },
+    "Qiddiya":              { "usd_k": 350,"raw": 1310625,  "currency": "SAR", "sf_name": "Qiddiya Investment Company (QIC)" },
+    "IKK Group / Aramco PDF": { "usd_k": 189, "raw": 188500, "currency": "USD", "sf_name": "IKK Group" },
+    "Vanity Group":         { "usd_k": 12, "raw": 55000,    "currency": "MYR", "sf_name": "Vanity Group" },
+    "Media Prima":          { "usd_k": 168,"raw": 762000,   "currency": "MYR", "sf_name": "Media Prima Berhad" },
+    "Peikko":               { "usd_k": 6,  "raw": 25000,    "currency": "MYR", "sf_name": "Peikko Malaysia SDN BHD" },
+    "HotelKey":             { "usd_k": 14, "raw": 1153846,  "currency": "INR", "sf_name": "Hotelkey" }
+  }
+}
