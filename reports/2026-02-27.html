@@ -94,9 +94,11 @@
     </div>
     <div class="country-card-body">
       <ul>
+        <li><strong>Delivery progress:</strong> 13/21 accounts live on original approach, 7 of remaining 8 on Excel fallback. Red accounts reduced to 1 (-1 WoW). Stabilizing trajectory.</li>
+        <li>Competitive feature gap flagged: clients comparing ClearTax with AP portals on attachments, download history, custom fields. 14L current + 50L potential ARR at risk. Monday sync planned with Sales/Delivery/Product to create prioritized feature sheet with ARR impact per request.</li>
         <li>
           <details class="thread-refs">
-            <summary>30+ active issues in Outstanding Issues tracker across 15+ clients &mdash; issue count unchanged from last report. Competitive feature gap flagged: clients comparing ClearTax with AP portals on attachments, download history, custom fields. 14L current + 50L potential ARR at risk. Monday sync planned with Sales/Delivery/Product to prioritize.</summary>
+            <summary>30+ active issues in Outstanding Issues tracker across 15+ clients. New L3 tickets this period: purchase invoice missing for Hilton (Peppol DB lookup), 15 fields missing from detailed report (Satvik auditing all BE report paths), Ascott lite report 9-issue cluster. Report quality is a recurring theme.</summary>
             <ul class="thread-list">
               <li>PDF naming convention &mdash; affects Delvaux, Shaw Inc, Havas Media, Ascott and others</li>
               <li>Remarks field missing &mdash; affects Delvaux, Shaw Inc, Havas Media, CPP Corp</li>
@@ -111,8 +113,7 @@
             </ul>
           </details>
         </li>
-        <li>New L3 tickets: purchase invoice missing for Hilton (vendor sent via Peppol, not found in ClearTax DB), 15 fields missing from detailed report (Satvik investigating), Ascott lite report 9-issue cluster. Belgium report quality is a recurring theme across multiple clients.</li>
-        <li>MIS dashboard (GEINV-737) stale 3 days &mdash; ETA 1st week of March tentatively confirmed but not locked. CPP Corp UBL invoices rejected at buyer level due to DueDate element ordering.</li>
+        <li>MIS dashboard (GEINV-737) stale 3 days &mdash; ETA 1st week of March tentatively confirmed. CPP Corp UBL invoices rejected at buyer level due to DueDate element ordering. USFI BV stakeholder meeting requested by delivery team.</li>
       </ul>
 
       <div class="customer-issues">
@@ -168,9 +169,10 @@
     </div>
     <div class="country-card-body">
       <ul>
-        <li>E-reporting ETA 5 Mar per delivery update. Ecosio delivered all payloads (Feb 25) but no evidence of engineering testing on the API yet &mdash; thread silent since the unblock. March 20 regulatory deadline is 21 days away.</li>
-        <li>Prod onboarding progressing &mdash; SOP published, DB PR #5580 raised for test user onboarding. EU on-call can now handle independently until Retool is built.</li>
-        <li>Print feature requested by Cognizant &mdash; 3 follow-ups over 3 days with no engineering response. Client awaiting an email reply with ETA.</li>
+        <li><strong>Delivery progress:</strong> On track per delivery update. E-reporting ETA 5 Mar. Croatia reporting module targeted 1st week of March. Send flow planned for next quarter.</li>
+        <li>Ecosio delivered all e-reporting sample payloads (payments, rejections, ACK, negative callbacks) and enabled rejection config. Engineering yet to confirm API testing progress &mdash; thread silent since unblock. March 20 regulatory deadline is 21 days away.</li>
+        <li>Prod onboarding progressing &mdash; SOP published for Poland/Croatia onboarding, DB PR #5580 raised for test user. EU on-call can now handle independently until Retool is built.</li>
+        <li>Print feature requested by Cognizant &mdash; 3 follow-ups over 3 days with no engineering response. Client awaiting email reply with ETA. Cognizant also asking for e-invoice applicability spreadsheet help.</li>
       </ul>
       <p class="no-issues">No customer escalations in reporting period.</p>
       <details class="metrics-toggle">
@@ -203,10 +205,11 @@
     </div>
     <div class="country-card-body">
       <ul>
-        <li>CRITICAL: 10&ndash;15 production invoices with invalid/dummy Buyer VAT numbers showing as &ldquo;Valid&rdquo; &mdash; no validation on buyer VAT exists. Product/design gap, not a bug. Requires product decision on whether Poland buyer VAT should be validated.</li>
+        <li><strong>Delivery progress:</strong> Adidas data flow issues largely resolved (1 remaining). Expected to stabilize by next week. Poland classified as &ldquo;Green and stabilizing&rdquo; in momentum update.</li>
+        <li>CRITICAL: 10&ndash;15 production invoices with invalid/dummy Buyer VAT numbers showing as &ldquo;Valid&rdquo; &mdash; no validation on buyer VAT exists. Product/design gap. Requires product decision on whether Poland buyer VAT should be validated.</li>
         <li>Adidas issues compounding &mdash; 4+ distinct clusters: invalid data in two fields (ecosio tickets), duplicate invoice errors (error 440, manual fix applied but audit trail still shows &ldquo;failed&rdquo;), buyer tax filter not working, Excel template needs enum updates. Internal call requested but not confirmed.</li>
         <li>KSeF rate limiting discovered &mdash; message retrieval hitting 500-request limit. Awaiting Vertex documentation on all rate limits.</li>
-        <li>Poland/ecosio technical sync scheduled for today (Feb 27) to resolve outstanding open questions.</li>
+        <li>Poland/ecosio technical sync scheduled for today (Feb 27) to resolve outstanding open questions. Poland KSeF deadline clarified: invoice must be submitted by 15th of month following supply.</li>
       </ul>
 
       <div class="customer-issues">
@@ -252,9 +255,11 @@
     </div>
     <div class="country-card-body">
       <ul>
-        <li>C4 API handover was scheduled for today (Feb 27) but delivery update says API fix ETA is March 6 and UI ETA is March 3rd week. Conflicting timelines creating confusion for delivery planning. E-invoicing onboarding paused until product stabilizes.</li>
-        <li>C5 testing believed complete per FTA. Production Peppol ID creation pending &mdash; needs ClearTax VAT number. Confirmation still awaited from engineering.</li>
-        <li>Yardi (property management software) requesting strategic alignment meeting &mdash; potential enterprise partnership for MEA. Meeting proposed for March 2&ndash;3.</li>
+        <li><strong>Active TODAY:</strong> FTA requesting production testing session today (Feb 27). Engineering coordinating internal sync first to test AP thoroughly before live session with FTA. Scope: access point testing + onboarding. Team aligning on expectations before confirming.</li>
+        <li>C4 API timeline mismatch &mdash; momentum says &ldquo;API handover Feb 27,&rdquo; delivery says &ldquo;API fix ETA March 6, UI ETA March 3rd week.&rdquo; E-invoicing onboarding paused until product stabilizes. IT assessment projects continuing as they have no product dependency.</li>
+        <li><strong>Hiring on track:</strong> SE (2 in offer stage, 1 in round 3), PM and CSM already onboarded, SPM in offer acceptance. On track for March 31 hiring target.</li>
+        <li>C5 testing believed complete per FTA. Production Peppol ID creation pending. Tabby 24K risk averted &mdash; aligned to no-UI approach with weekly status reports.</li>
+        <li>Yardi requesting strategic alignment meeting (March 2&ndash;3) &mdash; potential enterprise partnership for MEA. RMS (already integrated Belgium Unified API) also wants to start UAE and Germany integration.</li>
         <li>ClearTax volunteered for C2-C3 Interoperability Testing among Pre-Approved Service Providers. Awaiting MoF next steps.</li>
       </ul>
 
@@ -301,10 +306,10 @@
     </div>
     <div class="country-card-body">
       <ul>
-        <li>P0 delivery deadline slipped from Feb 27 to March 6 &mdash; QA fixes ETA 6 Mar, client onboarding from 9 Mar. No explicit communication on the slip. Abhilash took over delivery. Differentiation needed: which P0 items were actually delivered vs which slipped.</li>
-        <li>Print template mapping (GEINV-725) stale for 3 days &mdash; engineering needs access to a Germany account to validate. Still blocking accurate client-facing documents.</li>
-        <li>Payment Due Date, PO Ref, and Line Item VAT not reflecting in XML for Purchase flow &mdash; platform-wide issue affecting all Germany customers. Combined with open issues per client, customer onboarding quality remains at risk.</li>
-        <li>GTM still requesting published Q milestone tracker with dates &mdash; high-level targets shared (Croatia 1st week March, Germany 1&ndash;2nd week March) but full breakdown not published.</li>
+        <li><strong>Delivery progress:</strong> QA fixes ETA 6 Mar, client onboarding from 9 Mar. Germany classified as &ldquo;Development Complete&rdquo; &mdash; in bug-fixing and testing phase. Delivery handover targeted 6 March. Germany receive module targeted 1&ndash;2nd week of March.</li>
+        <li>P0 deadline slipped from Feb 27 to March 6 with no explicit communication. Abhilash took over delivery from Anand. RMS (OEM partner, already integrated Belgium) wants to start Germany Unified API integration &mdash; awaiting send flow ETA from product.</li>
+        <li>Print template mapping (GEINV-725) stale for 3 days. Payment Due Date, PO Ref, Line Item VAT not reflecting in XML for Purchase &mdash; affects all Germany customers. 8+ open issues across HID Global, SGK, K&amp;S.</li>
+        <li>GTM flagged &ldquo;Germany is not at all complete&rdquo; &mdash; requesting published Q milestone tracker. High-level targets shared but full breakdown not published.</li>
       </ul>
 
       <div class="customer-issues">
@@ -392,10 +397,11 @@
     </div>
     <div class="country-card-body">
       <ul>
-        <li>No significant Slack activity or email updates in the reporting window.</li>
+        <li><strong>Major regulatory update:</strong> Singapore eInvoicing for all GST-registered businesses extended to April 2031. New timeline shared via LinkedIn post from government source. This significantly de-risks Singapore launch urgency.</li>
+        <li>No active engineering or product work in the reporting window.</li>
       </ul>
       <div class="path-to-green">
-        <strong>Path to Green:</strong> Re-establish visibility on Singapore progress. Confirm InvoiceNow/PEPPOL-SG timeline.
+        <strong>Path to Green:</strong> Re-evaluate Singapore priority given April 2031 extension. Confirm InvoiceNow/PEPPOL-SG strategic timeline.
       </div>
     </div>
   </div>
@@ -411,7 +417,7 @@
       <tr><td>&#x1F1EF;&#x1F1F4; Jordan</td><td><span class="pipeline-status">Discovery</span></td><td>InvoiceQ API docs + sandbox shared. Tech PoC needed. MAF deal volumes (7M committed) awaiting Sales.</td></tr>
       <tr><td>&#x1F1EA;&#x1F1EC; Egypt</td><td><span class="pipeline-status">Discovery</span></td><td>Bundled with Jordan evaluation. InvoiceQ being assessed for both.</td></tr>
       <tr><td>&#x1F1F6;&#x1F1E6; Qatar</td><td><span class="pipeline-status">Pilot</span></td><td>Qatar pilot sessions March 3 (introductory) and March 10 (technical). Registered and attending.</td></tr>
-      <tr><td>&#x1F1F4;&#x1F1F2; Oman</td><td><span class="pipeline-status">Discovery</span></td><td>Two accreditation options being evaluated: proper accreditation vs ASP partnership (no local entity needed).</td></tr>
+      <tr><td>&#x1F1F4;&#x1F1F2; Oman</td><td><span class="pipeline-status">Discovery</span></td><td>Two accreditation options being evaluated: proper accreditation vs ASP partnership (no local entity needed). EMARATAX linkage to corporate tax recon explored &mdash; potential 2x TAM.</td></tr>
       <tr><td>&#x1F1F5;&#x1F1ED; Philippines</td><td><span class="pipeline-status">Discovery</span></td><td>No updates this period.</td></tr>
     </tbody>
   </table>
@@ -477,9 +483,11 @@
     </div>
     <div class="country-card-body">
       <ul>
-        <li>PagerDuty Sev1 triggered Feb 26 (error rate &gt;25% on einvoicing-core-prod-my). Root cause: LHDN government API returning 503. Resolved within hours. Not a ClearTax issue.</li>
+        <li><strong>Delivery progress:</strong> Stable with no new risks. Support SLA at 87.8%. QSR completion at 74% (132/179). MY auto-renewal is live &mdash; training completed with MY team.</li>
+        <li>PagerDuty Sev1 triggered Feb 26 (error rate &gt;25% on einvoicing-core-prod-my). Root cause: LHDN government API returning 503. Resolved within hours &mdash; not a ClearTax issue.</li>
         <li>SSL certificate rotation for api.my.cleartax.com scheduled April 2. Customer communications starting March 2. Customers must pin 3 new certificates before rotation or API calls will fail.</li>
-        <li>Unified API live but not yet tested by any customer. HotelKey targeting end-of-March go-live. 87.8% support SLA per delivery update.</li>
+        <li>Unified API live but not yet tested by any customer. HotelKey targeting end-of-March go-live. Field mapping alignment in progress.</li>
+        <li>1 churn: NKR Continental (17.5K) &mdash; moved to Odoo. No other customer-impacting issues.</li>
       </ul>
       <p class="no-issues">No customer escalations in reporting period.</p>
       <details class="metrics-toggle">
@@ -508,9 +516,10 @@
     </div>
     <div class="country-card-body">
       <ul>
-        <li>Aramco PDF fix deployed and holding. 3 new accounts live. No new customer escalations.</li>
-        <li>Churn at 78% driven by companies integrating directly with ZATCA &mdash; strategic concern, not a product issue. Sales-Delivery interlock scheduled next week.</li>
-        <li>Tabby 24K risk averted &mdash; no UI needed, weekly reports substitute accepted by client.</li>
+        <li><strong>Delivery progress:</strong> Aramco PDF fix deployed and holding. 3 new accounts went live this period. Support SLA at 90.6%. No open customer escalations.</li>
+        <li>Churn at 78% driven by companies integrating directly with ZATCA and pricing &mdash; strategic market concern, not a product issue. Sales-Delivery interlock scheduled for next week.</li>
+        <li>Tabby 24K risk averted &mdash; aligned to no-UI approach with weekly status reports. Pending product feasibility confirmation for automated report trigger.</li>
+        <li>GCC auto-renewals gaining traction &mdash; 1 renewal closed worth 35L SAR, 6 more targeted this month. Digital delivery team driving renewals.</li>
       </ul>
 
       <div class="customer-issues">
@@ -551,7 +560,6 @@
     <li><strong>FTA/MoF &mdash; UAE:</strong> ClearTax volunteered for C2-C3 Interoperability Testing. Only registered portal reps can attend MoF sessions &mdash; email registration pending.</li>
     <li><strong>Yardi &mdash; UAE:</strong> Strategic alignment meeting proposed for March 2&ndash;3. Interested in ClearTax eInvoicing roadmap, architecture, and partnership model.</li>
     <li><strong>Adidas &mdash; Poland:</strong> Sending invalid data in two fields. Two separate ecosio tickets. Plus buyer VAT validation gap discovered in production.</li>
-    <li><strong>Savvy Games &mdash; UAE:</strong> Client may not renew if GL reconciliation not delivered. Data deletion and comma separator issues still pending.</li>
     <li><strong>GENA Innovation Working Group:</strong> Exploring development of collective report on AI use in e-invoicing. Industry intelligence signal.</li>
   </ul>
 
@@ -564,6 +572,8 @@
     <li><strong>GCC Sanity Testing:</strong> Day 3 blocked. Invalid license error in QA preventing e-invoice generation. No one available to debug until next week (hackathon + leaves). Workspace switcher release blocked.</li>
     <li><strong>Cygnet Competitive:</strong> Day 10 with no one-pager for sales. Engineering bandwidth now available. Needs pickup this week.</li>
     <li><strong>Hackathon Season 4:</strong> Company-wide AI agents sprint completed Feb 26&ndash;27. Demo submissions due today. Some team impact now clearing.</li>
+    <li><strong>HighRadius Partnership:</strong> CEO requesting economics on partnership &mdash; potential strategic channel for e-invoicing distribution.</li>
+    <li><strong>EMARATAX / Corporate Tax Recon:</strong> Exploration pushed by strategy team &mdash; linking corporate tax recon alongside VAT in every country could 2x the Tax TAM. Early-stage signal worth tracking.</li>
   </ul>
 
   <!-- ==================== MOVEMENT SINCE LAST REPORT ==================== -->

@@ -79,7 +79,7 @@ Generate a JSON response with this exact structure:
     {{"country": "Name", "prediction": "Forward-looking prediction with conditions", "confidence": "high|medium|low"}}
   ],
   "coaching": [
-    "Actionable coaching insight for leadership..."
+    "Factual pattern observation (no advice or recommendations)..."
   ],
   "risk_watch": [
     "Specific risk to monitor with recommended action..."
@@ -89,7 +89,7 @@ Generate a JSON response with this exact structure:
 Guidelines:
 - Be specific and evidence-based. Reference actual RAG changes and patterns.
 - Predictions should include conditions ("if X happens, then Y").
-- Coaching should be actionable — tell leadership what to DO.
+- Coaching should be factual pattern observations only — no advice, recommendations, or prescriptive language. State what IS, not what to do.
 - Risk watch should include recommended timelines for action.
 - Focus on the 10 main countries (India, Malaysia, KSA, Belgium, Croatia, Poland, UAE, Germany, France, Singapore).
 - Skip pipeline-only countries (Jordan, Egypt, etc.) unless they have significant data.
